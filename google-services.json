@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "194397761500",
+    "project_id": "khayati-uae",
+    "storage_bucket": "khayati-uae.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:194397761500:android:256dcb647a2eabf7eda919",
+        "android_client_info": {
+          "package_name": "com.khayatipro.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdKoAF8kr5FpYT48Ri6p056d57SjN6rAI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:194397761500:android:435749986f18829beda919",
+        "android_client_info": {
+          "package_name": "com.os.khayati"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdKoAF8kr5FpYT48Ri6p056d57SjN6rAI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

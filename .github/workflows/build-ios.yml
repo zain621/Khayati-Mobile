@@ -1,0 +1,81 @@
+name: Build iOS IPA (unsigned)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-ios:
+    runs-on: macos-latest
+    timeout-minutes: 40
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create .env
+        env:
+          ENV_FILE: ${{ secrets.ENV_FILE }}
+        run: |
+          if [ -n "$ENV_FILE" ]; then
+            printf '%s\n' "$ENV_FILE" > .env
+          elif [ -f .env.example ]; then
+            echo "ENV_FILE secret missing, using .env.example"
+            cp .env.example .env
+          else
+            echo "ENV_FILE secret missing, creating empty .env"
+            touch .env
+          fi
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Flutter version
+        run: flutter --version
+
+      - name: Disable Swift Package Manager
+        run: flutter config --no-enable-swift-package-manager
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Check generated files exist
+        run: |
+          test -f lib/core/network/app_api.g.dart || { echo "app_api.g.dart missing. Generated files were not committed."; exit 1; }
+
+      - name: Build iOS (no codesign)
+        timeout-minutes: 30
+        run: |
+          set -o pipefail
+          flutter build ios --release --no-codesign -v 2>&1 | tee build_log.txt
+
+      - name: Show errors
+        if: failure()
+        run: |
+          echo "===== ERROR LINES ====="
+          grep -n -E "error:|Error:|Exception|Target .* failed|Command .* failed|BUILD FAILED|\*\* .* FAILED" build_log.txt | grep -v -i "warning:" | cut -c1-300 | head -40 || true
+          echo "===== LAST 80 LINES ====="
+          tail -n 80 build_log.txt | cut -c1-300
+
+      - name: Upload build log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log
+          path: build_log.txt
+
+      - name: Package IPA
+        run: |
+          mkdir -p build/ios/ipa/Payload
+          cp -R build/ios/iphoneos/Runner.app build/ios/ipa/Payload/
+          cd build/ios/ipa
+          zip -r Runner.ipa Payload
+
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: khayati-ios-ipa
+          path: build/ios/ipa/Runner.ipa
+          retention-days: 7

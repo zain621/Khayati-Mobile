@@ -1,0 +1,37 @@
+workflows:
+  ios-development:
+    name: iOS Development Build
+    max_build_duration: 90
+
+    environment:
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+      ios_signing:
+        distribution_type: development
+        bundle_identifier: com.os.khayati.app
+
+    scripts:
+      - name: Flutter packages get
+        script: flutter pub get
+
+      - name: Generate .g.dart files (json_serializable + retrofit)
+        script: dart run build_runner build --delete-conflicting-outputs
+
+      - name: Configure code signing profiles
+        script: xcode-project use-profiles
+
+      - name: Build iOS IPA
+        script: flutter build ipa --release --export-options-plist=$CM_EXPORT_OPTIONS_PLIST
+
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+
+    publishing:
+      email:
+        recipients:
+          - mr.ayesh88@gmail.com
+        notify:
+          success: true
+          failure: true

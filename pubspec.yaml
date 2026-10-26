@@ -1,0 +1,122 @@
+name: app_mobile
+description: "Flutter App"
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+
+version: 1.0.0+10
+
+environment:
+  sdk: ^3.5.3
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  flutter_dotenv: ^5.1.0
+  shared_preferences: ^2.3.2
+  easy_localization: ^3.0.7
+  flutter_svg: ^2.0.7
+  toast: ^0.3.0
+  lottie: ^2.6.0
+  retrofit: ^4.4.1
+  retrofit_generator: ^9.1.2
+  json_annotation: ^4.9.0
+  dio: ^5.7.0
+  internet_connection_checker_plus: ^1.0.0+1
+  shimmer: ^3.0.0
+  cached_network_image: ^3.3.1
+  path_provider: ^2.1.4
+  flutter_cache_manager: ^3.3.1
+  intl: ^0.20.2
+  rename: ^3.0.2
+  args: ^2.5.0
+  get: ^4.6.6
+  get_it: ^8.0.0
+  pretty_dio_logger: ^1.4.0
+  dartz: ^0.10.1
+  flutter_native_splash: ^2.4.1
+  flutter_screenutil: ^5.9.3
+  pinput: ^6.0.2
+  salomon_bottom_bar: ^3.3.2
+  google_maps_flutter: ^2.9.0
+  google_maps_flutter_android: ^2.14.0
+  google_maps_flutter_platform_interface: ^2.9.0
+  dotted_border: ^2.1.0
+  image_picker: ^1.1.2
+  image_picker_android: ^0.8.13
+  # Gallery: Android Photo Picker only (no READ_MEDIA_*). Chat files: SAF documents only.
+  file_picker: ^8.0.0
+  permission_handler: ^11.3.1
+  http_parser: ^4.0.2
+  socket_io_client: ^2.0.3+1
+  geolocator: ^13.0.2
+  flutter_colorpicker: ^1.1.0
+  flutter_image_compress: ^2.3.0
+  url_launcher: ^6.3.0
+  webview_flutter: ^4.8.0
+  firebase_core: ^4.15.0
+  firebase_messaging: ^16.7.0
+  flutter_local_notifications: ^18.0.1
+  
+  # device_preview: ^1.2.
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+  flutter_lints: ^4.0.0
+  json_serializable: ^6.8.0
+  build_runner: ^2.4.13
+  flutter_launcher_icons: ^0.14.3
+
+
+flutter:
+
+
+  uses-material-design: true
+
+  assets:
+    - assets/adi-registration.properties
+    - assets/images/
+    - assets/json/
+    - assets/json/mockup/
+    - assets/translations/
+    - assets/icons/
+    - assets/images_remove/
+    - .env
+  fonts:
+    - family: Almarai
+      fonts:
+        - asset: assets/fonts/Almarai-Bold.ttf
+        - asset: assets/fonts/Almarai-ExtraBold.ttf
+        - asset: assets/fonts/Almarai-Light.ttf
+        - asset: assets/fonts/Almarai-Regular.ttf
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/logo_app.png"
+  min_sdk_android: 21
+  remove_alpha_ios: true
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/images/logo_app.png"
+  web:
+    generate: false
+  windows:
+    generate: false
+  macos:
+    generate: false
+flutter_native_splash:
+  # Full-bleed new splash photo (not the old collage grid).
+  background_image: assets/images/splash-bg.jpg
+  android: true
+  ios: true
+  web: false
+  android_gravity: fill
+  ios_content_mode: scaleAspectFill
+  android_12:
+    color: "#00594E"
+    image: assets/images/logo_app.png

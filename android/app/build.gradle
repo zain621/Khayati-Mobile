@@ -1,0 +1,124 @@
+plugins {
+    id "com.android.application"
+    // START: FlutterFire Configuration
+    id 'com.google.gms.google-services'
+    // END: FlutterFire Configuration
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+// ── Load signing properties ────────────────────────────────────────────────
+def keystorePropertiesFile = rootProject.file("key.properties")
+def keystoreProperties = new Properties()
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+android {
+    namespace = "com.os.khayati"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        // Required by flutter_local_notifications (java.time APIs on older Android).
+        coreLibraryDesugaringEnabled = true
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    // ── Signing configs ────────────────────────────────────────────────────
+    signingConfigs {
+        release {
+            if (keystorePropertiesFile.exists()) {
+                keyAlias      = keystoreProperties['keyAlias']
+                keyPassword   = keystoreProperties['keyPassword']
+                storeFile     = file(keystoreProperties['storeFile'])
+                storePassword = keystoreProperties['storePassword']
+            }
+        }
+    }
+
+    defaultConfig {
+        applicationId = "com.khayatipro.app"
+        minSdk        = flutter.minSdkVersion
+        targetSdk     = flutter.targetSdkVersion
+        versionCode   = flutter.versionCode
+        versionName   = flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            if (keystorePropertiesFile.exists()) {
+                signingConfig = signingConfigs.release
+            }
+            minifyEnabled   = true
+            shrinkResources = true
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"),
+                          "proguard-rules.pro"
+        }
+        debug {
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+// Fail release packaging early if the upload keystore is not configured.
+gradle.taskGraph.whenReady { graph ->
+    def isReleaseTask = graph.allTasks.any { task ->
+        def n = task.name.toLowerCase()
+        return (n.contains("release") &&
+            (n.startsWith("assemble") || n.startsWith("bundle") || n.contains("sign")))
+    }
+    if (isReleaseTask && !keystorePropertiesFile.exists()) {
+        throw new GradleException(
+            "Missing android/key.properties. Create it from android/key.properties.example " +
+            "and point storeFile to your upload keystore before building a release."
+        )
+    }
+}
+
+dependencies {
+    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.1.4"
+    implementation "com.google.android.play:app-update:2.1.0"
+    implementation "com.google.android.play:review:2.0.2"
+}
+
+flutter {
+    source = "../.."
+}
+
+// Fail the release build if Play-restricted photo/video permissions reappear.
+tasks.configureEach { task ->
+    if (task.name == "processReleaseMainManifest" ||
+        task.name == "processReleaseManifest") {
+        task.doLast {
+            def manifestFile = task.outputs.files.files.find {
+                it.name == "AndroidManifest.xml"
+            }
+            if (manifestFile == null || !manifestFile.exists()) return
+            def text = manifestFile.getText("UTF-8")
+            def banned = [
+                "android.permission.READ_MEDIA_IMAGES",
+                "android.permission.READ_MEDIA_VIDEO",
+                "android.permission.READ_MEDIA_AUDIO",
+                "android.permission.READ_MEDIA_VISUAL_USER_SELECTED",
+                "android.permission.READ_EXTERNAL_STORAGE",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                "android.permission.MANAGE_EXTERNAL_STORAGE",
+            ]
+            def bad = banned.findAll { perm ->
+                def matcher = (text =~ /<uses-permission[^>]*android:name="${java.util.regex.Pattern.quote(perm)}"[^>]*\/?>/)
+                matcher.findAll { line -> !line.contains('tools:node="remove"') }.size() > 0
+            }
+            if (!bad.isEmpty()) {
+                throw new GradleException(
+                    "Release manifest still declares photo/video permissions (Play policy): ${bad}."
+                )
+            }
+        }
+    }
+}

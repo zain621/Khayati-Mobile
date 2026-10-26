@@ -1,0 +1,1412 @@
+import 'package:easy_localization/easy_localization.dart';
+
+/// A class defined for strings the app
+class ManagerStrings {
+  //Splash Screen
+    static String get splashScreenHint=> "اطلب ما تريد بالطريقة التي تُحب";
+
+  // OnBoarding Screen
+  static String get onBoardingTitle1 => "تفصيل فاخر بجودة مُعتمدة";
+  static String get onBoardingSubtitle1 =>
+      "اختاري خياطين ومحلات بتقييمات حقيقية ونظام رتب يضمن لك الجودة والالتزام بالمواعيد—لأن المخاطة تبدأ من الثقة";
+  static String get onBoardingTitle2 => "تفصيل على ذوقك بكل ثقة";
+  static String get onBoardingSubtitle2 =>
+      "ارفعي صورة الموديل أو اكتبي وصفك، وسيتاح أفضل الخياطين المتحدين بتقديم عروضهم لك بالسعر والمدة، وأنتِ تختارين الأنسب";
+  static String get onBoardingTitle3 => "اطلبي وأنا أضمن لك الضبطة";
+  static String get onBoardingSubtitle3 =>
+      "استمتعي بتجربة تفصيل منظمة وآمنة من اختيار الموديل إلى استلام الملبس المناسب، كل شيء واضح ومحسوب داخل خياطي";
+  static String get onBoardingNext => "التالي";
+  static String get onBoardingStart => "ابدأ الآن";
+  static String get onBoardingLogin => "تسجيل الدخول";
+
+  // Login Screen
+  static String get loginScreenTitle => "تسجيل الدخول إلى\nحسابك";
+  static String get loginScreenSubTitle => "أدخل رقم الهاتف وكلمة المرور لتسجيل الدخول";
+  static String get loginScreenPhoneLabel => "رقم الهاتف";
+  static String get loginScreenPhoneHint => "(966) 59-726-0592";
+  static String get loginScreenPasswordLabel => "كلمة المرور";
+  static String get loginScreenPasswordHint => "******";
+  static String get loginScreenForgotPassword => "هل نسيت كلمة السر؟";
+  static String get loginScreenButton => "تسجيل الدخول";
+  static String get loginScreenNoAccount => "ليس لديك حساب بالفعل؟";
+  static String get loginScreenRegister => "إنشاء حساب جديد";
+
+  // Login Snackbar & Validation Messages
+  static String get loginSuccess => "تم تسجيل الدخول بنجاح";
+  static String get loginSuccessEn => "Login successful";
+  static String get loginErrorPhoneEmpty => "يرجى إدخال رقم الهاتف";
+  static String get loginErrorPhoneEmptyEn => "Please enter your phone number";
+  static String get loginErrorPasswordEmpty => "يرجى إدخال كلمة المرور";
+  static String get loginErrorPasswordEmptyEn => "Please enter your password";
+
+  // Reset Password Screen
+  static String get resetPasswordTitle => "إعادة تعيين كلمة المرور";
+  static String get resetPasswordSubTitle =>
+      "يرجى إدخال رقم هاتفك المرتبط بحسابك سنرسل لك تعليمات حول كيفية إنشاء كلمة مرور جديدة عبر رسالة نصية";
+  static String get resetPasswordPhoneLabel => "رقم الهاتف";
+  static String get resetPasswordPhoneHint => "(966) 59-726-0592";
+  static String get resetPasswordSendCode => "إعادة الضبط";
+
+  // Reset Password Validation & Snackbar
+  static String get resetPasswordErrorPhoneEmpty => "يرجى إدخال رقم الهاتف";
+  static String get resetPasswordErrorPhoneEmptyEn => "Please enter your phone number";
+  static String get forgotPasswordSuccess => "تم إرسال رمز التحقق إلى هاتفك";
+  static String get forgotPasswordSuccessEn => "Verification code sent to your phone";
+
+  // Verification Code Screen
+  static String get verificationTitle => "أدخل رمز التحقق";
+  static String get verificationSubTitle1 =>
+      "لقد قمنا بإرسال رمز التحقق إلى رقم الهاتف التالي";
+  static String get verificationSubTitle2 => "تغيير الرقم";
+  static String get verificationCodeLabel => "رمز التحقق";
+  static String get verificationResend => "إعادة إرسال الرمز";
+  static String get verificationResendAfter => "إرسال رمز إعادة الضبط في";
+  static String get verificationVerifyButton => "تحقق من الكود";
+
+  // Verification Code Validation & Snackbar
+  static String get verifyCodeErrorEmpty => "يرجى إدخال رمز التحقق كاملاً";
+  static String get verifyCodeErrorEmptyEn => "Please enter the complete verification code";
+  static String get verifyCodeSuccess => "تم التحقق بنجاح";
+  static String get verifyCodeSuccessEn => "Verification successful";
+  static String get resendCodeSuccess => "تم إعادة إرسال الرمز بنجاح";
+  static String get resendCodeSuccessEn => "Code resent successfully";
+
+  // Provider Login OTP Screen
+  static String get providerLoginOtpSuccess => "تم التحقق بنجاح وتسجيل الدخول";
+  static String get providerLoginOtpSuccessEn => "Login verified successfully";
+
+  // New Password Screen
+  static String get newPasswordTitle => "أدخل كلمة المرور الجديدة";
+  static String get newPasswordSubTitle =>
+      "خطوة أخيرة! استكمل البيانات المطلوبة ليتم تغيير كلمة المرور بنجاح وتعود لاستخدام خياطي بدون أي عوائق.";
+  static String get newPasswordLabel => "كلمة المرور الجديدة";
+  static String get newPasswordHint =>
+      "يجب أن تكون كلمة المرور من 8 أحرف على الأقل وتتضمن حروفاً وأرقاماً";
+  static String get newPasswordConfirmLabel => "تأكيد كلمة المرور الجديدة";
+  static String get newPasswordUpdateButton => "إعادة تعيين كلمة المرور";
+
+  // New Password Validation & Snackbar
+  static String get newPasswordErrorEmpty => "يرجى إدخال كلمة المرور الجديدة";
+  static String get newPasswordErrorEmptyEn => "Please enter the new password";
+  static String get newPasswordErrorConfirmEmpty => "يرجى تأكيد كلمة المرور";
+  static String get newPasswordErrorConfirmEmptyEn => "Please confirm your password";
+  static String get newPasswordErrorMismatch => "كلمتا المرور غير متطابقتين";
+  static String get newPasswordErrorMismatchEn => "Passwords do not match";
+  static String get newPasswordErrorTooShort => "كلمة المرور يجب أن تكون 8 أحرف على الأقل";
+  static String get newPasswordErrorTooShortEn => "Password must be at least 8 characters";
+  static String get resetPasswordFlowSuccess => "تم تغيير كلمة المرور بنجاح";
+  static String get resetPasswordFlowSuccessEn => "Password changed successfully";
+
+  // Password Changed Success Screen
+  static String get successPasswordTitle => "تم تغيير كلمة المرور بنجاح!";
+  static String get successPasswordSubTitle =>
+      "تم تغيير كلمة المرور بنجاح! يمكنك الآن تسجيل الدخول والمتابعة استخدام خياطي بكل سلاسة.";
+  static String get successPasswordButton => "تسجيل دخول";
+  static String get passwordChangedTitle => "تم تغيير كلمة المرور بنجاح!";
+  static String get passwordChangedSubTitle1 =>
+      "تم تغيير كلمة المرور بنجاح! يمكنك الآن تسجيل الدخول والمتابعة";
+  static String get passwordChangedSubTitle2 => "استخدام خياطي بكل سلاسة.";
+  static String get passwordChangedButton => "تسجيل دخول";
+  static String get passwordChangedPrivacy => "استخدام خياطي بكل سلاسة";
+
+  // Customer Register Screen
+  static String get registerTitle => "خياطي... تفصيل بثقة وجودة";
+  static String get registerSubTitle =>
+      "تعاملي مع خياطين ومحلات موثوقة، واطلبي بكل راحة واطمئنان";
+  static String get registerFullNameLabel => "الاسم الكامل";
+  static String get registerFullNameHint => "محمد علي موسى";
+  static String get registerPhoneLabel => "رقم الهاتف";
+  static String get registerPhoneHint => "(966) 59-726-0592";
+  static String get registerPasswordLabel => "كلمة المرور";
+  static String get registerPasswordHint => "******";
+  static String get registerButton => "إنشاء حساب جديد";
+  static String get registerHaveAccount => "لديك حساب بالفعل؟";
+  static String get registerLogin => "تسجيل الدخول";
+
+  // Register validation & snackbar messages
+  static String get registerErrorNameEmpty => "يرجى إدخال الاسم الكامل";
+  static String get registerErrorNameEmptyEn => "Please enter your full name";
+  static String get registerErrorPhoneEmpty => "يرجى إدخال رقم الهاتف";
+  static String get registerErrorPhoneEmptyEn => "Please enter your phone number";
+  static String get registerErrorPasswordEmpty => "يرجى إدخال كلمة المرور";
+  static String get registerErrorPasswordEmptyEn => "Please enter your password";
+  static String get registerCodeSent => "تم إرسال رمز التحقق بنجاح";
+  static String get registerCodeSentEn => "Verification code sent successfully";
+  static String get registerErrorCodeEmpty => "يرجى إدخال رمز التحقق كاملاً";
+  static String get registerErrorCodeEmptyEn => "Please enter the complete verification code";
+  static String get registerVerifySuccess => "تم التسجيل بنجاح، أهلاً بك!";
+  static String get registerVerifySuccessEn => "Registration successful, welcome!";
+
+  // Register Success Screen
+  static String get registerSuccessTitle => "تم إنشاء حسابك بنجاح!";
+  static String get registerSuccessSubTitle1 =>
+      "أهلاً بك في خياطي! يمكنك الآن تسجيل الدخول والمتابعة";
+  static String get registerSuccessSubTitle2 => "استخدام خياطي بكل سلاسة.";
+  static String get registerSuccessButton => "تسجيل دخول";
+  static String get registerSuccessPrivacy => "استخدام خياطي بكل سلاسة";
+
+  // Profile User Screen
+  static String get profileScreenTitle => "الملف الشخصي";
+  static String get profileScreenSubtitle => "البيانات الكاملة لملفك الشخصي";
+  static String get profileCompletedOrders => "طلب مكتمل";
+  static String get profileInProgress => "قيد التنفيذ";
+  static String get profileLoyaltyPoints => "نقاط ولائي";
+  static String get profileSectionAccount => "الحساب";
+  static String get profileEditTitle => "تعديل الملف الشخصي";
+  static String get profileEditSubtitle => "تحكم ببيانات حسابك وعدّلها وفقما تشاء";
+  static String get profileChangePasswordTitle => "تغيير كلمة المرور";
+  static String get profileChangePasswordSubtitle => "غير كلمة المرور لتعزيز أمان حسابك";
+  static String get profileManageAddressesTitle => "إدارة العناوين";
+  static String get profileManageAddressesSubtitle => "أضف وعدّل وأحذف عناوينك بكل مرونة";
+  static String get profileSectionAppInfo => "معلومات التطبيق";
+  static String get profileAboutTitle => "عن التطبيق";
+  static String get profileAboutSubtitle => "خياطي.. التجربة الذكية لخدمات التفصيل والخياطة";
+  static String get profileFaqTitle => "الأسئلة الشائعة";
+  static String get profileFaqSubtitle => "كل ما تحتاج معرفته في مكان واحد";
+  static String get profileSupportTitle => "الدعم الفني";
+  static String get profilePrivacyTitle => "سياسة الخصوصية";
+  static String get profilePrivacySubtitle => "تعرف على كيفية حماية بياناتك في خياطي";
+  static String get profileLogout => "تسجيل الخروج";
+  static String get logoutConfirmTitle => "تسجيل الخروج";
+  static String get logoutConfirmSubtitle => "هل أنت متأكد أنك تريد تسجيل الخروج من حسابك؟";
+  static String get logoutConfirmButton => "تسجيل الخروج";
+  static String get logoutCancelButton => "إلغاء";
+
+  // Provider Profile Screen
+  static String get providerProfileTitle => "الملف الشخصي";
+  static String get providerProfileSubtitle => "البيانات الكاملة لملفك الشخصي كخياط";
+  static String get providerProfileSectionAccount => "الحساب";
+  static String get providerProfileEditTitle => "تعديل الملف الشخصي";
+  static String get providerProfileEditSubtitle => "تحكم ببيانات حسابك وعدّلها وفقما تشاء";
+  static String get providerProfileChangePasswordTitle => "تغيير كلمة المرور";
+  static String get providerProfileChangePasswordSubtitle => "غير كلمة المرور لتعزيز أمان حسابك";
+  static String get providerProfileManageAddressesTitle => "إدارة العناوين";
+  static String get providerProfileManageAddressesSubtitle => "أضف وعدّل وأحذف عناوينك بكل مرونة";
+  static String get providerProfileSectionWork => "إعدادات العمل";
+  static String get providerProfilePortfolioTitle => "معرض الأعمال";
+  static String get providerProfilePortfolioSubtitle => "قم بعرض صور من أعمالك للزبائن";
+  static String get providerProfileSpecializationsTitle => "التخصصات";
+  static String get providerProfileSpecializationsSubtitle => "التخصصات تظهر في ملفك الشخصي ومعرض الأعمال";
+  static String get providerProfileSectionAppInfo => "معلومات التطبيق";
+  static String get providerProfileAboutTitle => "عن التطبيق";
+  static String get providerProfileAboutSubtitle => "خياطي.. التجربة الذكية لخدمات التفصيل والخياطة";
+  static String get providerProfileFaqTitle => "الأسئلة الشائعة";
+  static String get providerProfileFaqSubtitle => "كل ما تحتاج معرفته في مكان واحد";
+  static String get providerProfileSupportTitle => "الدعم الفني";
+  static String get providerProfileSupportSubtitle => "خياطي.. التجربة الذكية لخدمات التفصيل والخياطة";
+  static String get providerProfilePrivacyTitle => "سياسة الخصوصية";
+  static String get providerProfilePrivacySubtitle => "تعرف على كيفية حماية بياناتك في خياطي";
+  static String get providerProfileLogout => "تسجيل الخروج";
+  static String get providerProfileRankLabel => "رتبة الخياط :";
+  static String get providerProfileFetchError => "فشل تحميل الملف الشخصي";
+
+  // Update User Profile Screen
+  static String get updateUserProfileTitle => "تعديل الملف الشخصي";
+  static String get updateUserProfileSubtitle => "حدّث معلوماتك الشخصية";
+  static String get updateUserProfileSectionPersonal => "المعلومات الشخصية";
+  static String get updateUserProfileNameLabel => "الاسم الكامل";
+  static String get updateUserProfileNameHint => "أدخل اسمك الكامل";
+  static String get updateUserProfilePhoneLabel => "رقم الهاتف";
+  static String get updateUserProfilePhoneDisabledNote => "رقم الهاتف غير قابل للتعديل";
+  static String get updateUserProfileSaveButton => "حفظ التغييرات";
+  static String get updateUserProfileConfirmTitle => "تأكيد الحفظ";
+  static String get updateUserProfileConfirmSubtitle => "هل أنت متأكد من حفظ التغييرات على ملفك الشخصي؟";
+  static String get updateUserProfileConfirmYes => "حفظ";
+  static String get updateUserProfileConfirmNo => "إلغاء";
+  static String get updateUserProfileSuccess => "تم تحديث الملف الشخصي بنجاح";
+  static String get updateUserProfileSuccessEn => "Profile updated successfully";
+  static String get updateUserProfileErrorNameEmpty => "يرجى إدخال الاسم الكامل";
+  static String get updateUserProfileErrorNameEmptyEn => "Please enter your full name";
+  static String get updateUserProfileImagePickerTitle => "تغيير الصورة الشخصية";
+  static String get updateUserProfileImageCamera => "الكاميرا";
+  static String get updateUserProfileImageGallery => "معرض الصور";
+  static String get updateUserProfileImageCancel => "إلغاء";
+
+  // Auth Footer
+  static String get authFooterRememberPassword => "هل تذكرت كلمة المرور؟";
+  static String get authFooterLogin => "تسجيل الدخول";
+
+  // Choose Account Type Screen
+  static String get chooseAccountTitle => "اختر نوع حسابك";
+  static String get chooseAccountSubTitle1 => "هل ترغب بالانضمام ";
+  static String get chooseAccountSubTitleTailor => "كخياط";
+  static String get chooseAccountSubTitle2 =>
+      " لعرض مهاراتك ومشاركة أطباقك مع العملاء؟أو ";
+  static String get chooseAccountSubTitleBuyer => "كمشتري";
+  static String get chooseAccountSubTitle3 =>
+      " لتجربة وجبات منزلية محضرة بإتقان";
+  static String get chooseAccountCustomerTitle => "تابع كمستخدم";
+  static String get chooseAccountCustomerSubTitle =>
+      "استكشفي أجمل الملابس الجاهزة، واطلبي تفصيل على ذوقك بكل سهولة.";
+  static String get chooseAccountCustomerButton => "إنشاء حساب مشتري";
+  static String get chooseAccountProviderTitle => "إنشاء حساب كشريك";
+  static String get chooseAccountProviderSubTitle =>
+      "انضم إلى خياطي وقدم خدمات التفصيل عبر على ذوقك أو اعرض منتجاتك الجاهزة باحتراف.";
+  static String get chooseAccountProviderButton => "إنشاء حساب كمقدم خدمة";
+
+  // Provider Register Screen
+  static String get providerRegisterTitle => "اختر دورك كخياط";
+  static String get providerRegisterSubTitle => "حدد دورك كخياط لتظهر لك الأدوات المناسبة لإدارة طلباتك ومنتجاتك.";
+  static String get providerRegisterKeyword => "خياطي";
+
+  // Provider Step 1 - Role Selection
+  static String get providerRoleIndependentTitle => "خياط مستقل";
+  static String get providerRoleIndependentSubTitle =>
+      "نخصص في التفصيل حسب الطلب والتصاميم المخصصة";
+  static String get providerRoleIndependentTag1 => "تفصيل فقط";
+  static String get providerRoleIndependentTag2 => "عروض مباشرة";
+
+  static String get providerRoleShopTitle => "صاحب محل (متجر)";
+  static String get providerRoleShopSubTitle =>
+      "بيع الملابس جاهزة بتصاميم راقية وبمقاسات متعددة لتناسب جميع الأذواق والاحتياجات.";
+  static String get providerRoleShopTag1 => "منتجات جاهزة";
+  static String get providerRoleShopTag2 => "بيع مباشر";
+
+  static String get providerRoleComprehensiveTitle => "خياط شامل";
+  static String get providerRoleComprehensiveSubTitle =>
+      "بيع ملابس جاهزة مع تقديم عروض تفصيل عبر على ذوقك.";
+  static String get providerRoleComprehensiveTag1 => "الأكثر شمولاً";
+  static String get providerRoleComprehensiveTag2 => "خيارات متعددة";
+
+  // Provider Step 2 - Business Details
+  static String get providerBusinessDetailsTitle => "تفاصيل النشاط";
+  static String get providerBusinessDetailsSubTitle =>
+      "قم بتعبئة بياناتك التجارية لإكمال التسجيل";
+  static String get providerBusinessNameLabel => "اسم النشاط التجاري";
+  static String get providerBusinessNameHint => "مثل خياطة نورة الفاخرة";
+  static String get providerOwnerNameLabel => "اسم المالك";
+  static String get providerOwnerNameHint => "الاسم الكامل";
+  static String get providerPhoneLabel => "رقم الهاتف";
+  static String get providerPhoneHint => "(966) 59-726-0592";
+  static String get providerCityLabel => "المدينة";
+  static String get providerCityHint => "اختر المدينة";
+  static String get providerLocationLabel => "تعيين الموقع";
+  static String get providerLocationHint => "حدد موقع محلك/مشغلك";
+  static String get providerOpenMapButton => "افتح الخريطة";
+  static String get providerAddressLabel => "عنوان التفصيلي";
+  static String get providerAddressHint => "الشارع، المنطقة، الحي";
+
+  // Provider Step 3 - Experience & Specializations
+  static String get providerExperienceTitle => "الخبرة والتخصصات";
+  static String get providerExperienceSubTitle => "حدد المجالات التي تتقنها";
+  static String get providerYearsLabel => "سنوات الخبرة";
+  static String get providerYearsHint => "اختر سنوات الخبرة";
+  static String get providerBioLabel => "نبذة عنك";
+  static String get providerBioHint => "قم بكتابة نبذة عنك وعن أعمالك";
+  static String get providerSpecializationsLabel => "التخصصات (اختر مايناسبك)";
+  static String get providerSpecTagMen => "عباءات نسائية";
+  static String get providerSpecTagWomen => "كشخة رجالية";
+  static String get providerSpecTagKids => "أطفال";
+  static String get providerSpecTagWedding => "فساتين سهرة";
+  static String get providerSpecTagTraditional => "تطريز يدوي";
+  static String get providerSpecTagModern => "تصميم مخصص";
+
+  // Provider Step - Next Step Info
+  static String get providerNextStepTitle => "الخطوة التالية";
+  static String get providerNextStepDescription =>
+      "بعد إرسال الطلب، سنقوم مراجعة بياناتك والتواصل معك لاستكمال إجراءات التحقق وبعدها تسجيل الدخول إلى حسابك وسيتم إرسال كلمة المرور إليك عبر رسالة خاصة.";
+
+  // Provider Buttons
+  static String get providerNextButton => "التالي";
+  static String get providerPreviousButton => "السابق";
+  static String get providerSubmitButton => "إرسال الطلب";
+
+  // Provider Success Screen
+  static String get providerSuccessTitle => "تم تقديم طلب انضمامك بنجاح";
+  static String get providerSuccessSubTitle =>
+      "طلبك الآن قيد التحقيق وسيتم التواصل معك قريباً";
+  static String get providerSuccessButton => "متابعة الدخول لزائر";
+
+  // Provider Register Validation & Snackbar
+  static String get providerRegisterSuccess => "تم تقديم طلب مزود الخدمة بنجاح";
+  static String get providerErrorSelectRole => "يرجى اختيار دورك كخياط";
+  static String get providerErrorBusinessName => "يرجى إدخال اسم النشاط التجاري";
+  static String get providerErrorOwnerName => "يرجى إدخال اسم المالك";
+  static String get providerErrorPhone => "يرجى إدخال رقم الهاتف";
+  static String get providerErrorCity => "يرجى اختيار المدينة";
+  static String get providerErrorYears => "يرجى اختيار سنوات الخبرة";
+  static String get providerErrorCategories => "يرجى اختيار تخصص واحد على الأقل";
+  static String get providerLoadingCategories => "جاري تحميل التخصصات...";
+
+  // Map Picker
+  static String get mapPickerTitle => "حدد موقعك";
+  static String get mapPickerConfirm => "تأكيد الموقع";
+  static String get mapPickerLocationSelected => "تم تحديد الموقع";
+
+  /// Config Strings
+  static String get noRouteFound => tr('noRouteFound');
+
+  static String get success => tr('success');
+
+  static String get noContent => tr('noContent');
+
+  static String get badRequest => tr('badRequest');
+
+  static String get forbidden => tr('forbidden');
+
+  static String get unAuthorized => tr('unAuthorized');
+
+  static String get notFound => tr('notFound');
+
+  static String get internalServerError => tr('internalServerError');
+
+  static String get connectTimeOut => tr('connectTimeOut');
+
+  static String get cancel => tr('cancel');
+
+  static String get receiveTimeOut => tr('receiveTimeOut');
+
+  static String get sendTimeOut => tr('sendTimeOut');
+
+  static String get cacheError => tr('cacheError');
+
+  static String get noInternetConnection => tr('noInternetConnection');
+
+  static String get unKnown => tr('unKnown');
+
+  static String get sessionFinished => tr('sessionFinished');
+
+  static String get invalidEmptyEmail => tr('invalidEmptyEmail');
+
+  static String get invalidEmail => tr('invalidEmail');
+
+  static String get doYouWantToChangeIt => tr('doYouWantToChangeIt');
+
+  static String get invalidPasswordLength => tr('invalidEmptyPassword');
+
+  static String get invalidPasswordUpper => tr('invalidPasswordUpper');
+
+  static String get invalidPasswordLower => tr('invalidPasswordLower');
+
+  static String get invalidPasswordDigit => tr('invalidPasswordDigit');
+
+  static String get passwordNotMatch => tr('passwordNotMatch');
+
+  static String get invalidEmptyPhoneNumber => tr('invalidEmptyPhoneNumber');
+
+  static String get invalidEmptyCode => tr('invalidEmptyCode');
+
+  static String get invalidPhoneNumber => tr('invalidPhoneNumber');
+
+  static String get notVerifiedEmail => tr('notVerifiedEmail');
+
+  static String get invalidFullName => tr('invalidFullName');
+
+  static String get sorryFailed => tr('sorryFailed');
+
+  static String get invalidEmptyDateOfBirth => tr('invalidEmptyDateOfBirth');
+
+  static String get invalidEmptyFullName => tr('invalidEmptyFullName');
+
+  // ──────────────────────────────────────────────────────
+  // Independent Tailor Home Screen
+  // ──────────────────────────────────────────────────────
+  static String get homeGreeting => "صباح الخير";
+  static String get homeShopName => "خياطة نورة الفاخرة";
+  static String get homeTailorRank => "رتبة الخياط";
+  static String get homeTailorRankNew => "خياط جديد";
+
+  static String roleLabel(String? role) {
+    return switch (role) {
+      'comprehensive_tailor' => 'خياط شامل',
+      'independent_tailor' => 'خياط مستقل',
+      'shop_owner' => 'صاحب محل',
+      _ => homeTailorRankNew,
+    };
+  }
+  static String get homeVisibilityStatus => "حالة الظهور";
+  static String get homeVisibilityUnavailable => "غير متاح";
+  static String get homeVisibilityAvailable => "متاح";
+  static String get homeVisibilityAvailableSwitch => "الخياط متاح";
+  static String get homeVisibilityUnavailableSwitch => "غير متاح";
+  static String get homeVisibilityNote => "أكمل الحساب والخدمات مؤقتاً";
+  static String get homeBalanceTitle => "الرصيد المتاح للسحب";
+  static String get homeBalanceAmount => "4374";
+  static String get homeBalanceCurrency => "درهم إماراتي";
+  static String get homeLastLogin => "آخر تسجيل دخول:";
+  static String get homeOrdersTitle => "طلبات على ذوقك";
+  static String get homeOrdersSubtitle => "12 طلب جديد بانتظار عرضك";
+  static String get homeOrdersBadge => "12";
+  static String get homeOffersTitle => "عروضي المقدمة";
+  static String get homeOffersSubtitle => "متابعة حالة العروض";
+  static String get homeReviewsTitle => "آراء العملاء";
+  static String get homeReviewsSubtitle => "عرض آراء العملاء";
+
+  // Store Tailor Home
+  static String get homeStoreProductsTitle    => "إدارة المنتجات";
+  static String get homeStoreProductsSubtitle => "عرض – إضافة – تعديل – حذف";
+
+  // Manager Products Screen
+  static String get managerProductsTitle => "إدارة المنتجات";
+  static String get managerProductsSubtitle => "منتجات";
+  static String get managerProductsAddButton => "إضافة منتج";
+  static String get managerProductsSearchHint => "ابحث عن منتج..";
+  static String get managerProductsFilterAll => "الكل";
+  static String get managerProductsFilterActive => "نشط";
+  static String get managerProductsFilterInactive => "متوقف";
+  static String get managerProductsFilterOutOfStock => "نفذ المخزون";
+  static String get managerProductsStatusActive => "نشط";
+  static String get managerProductsStatusInactive => "متوقف";
+  static String get managerProductsStatusOutOfStock => "نفذ المخزون";
+  static String get managerProductsColors => "الألوان";
+  static String get managerProductsSizes => "المقاسات";
+  static String get managerProductsStock => "قطعة";
+  static String get managerProductsOrders => "طلب";
+  static String get managerProductsDelivery => "يوم";
+  static String get managerProductsEdit => "تعديل";
+  static String get managerProductsPause => "إيقاف";
+  static String get managerProductsResume => "تفعيل";
+  static String get managerProductsDelete => "حذف";
+  static String get managerProductsNoProducts => "لا توجد منتجات";
+  static String get managerProductsCurrency => "د.إ";
+
+  // Manager Products — Action loading overlay
+  static String get managerProductsActionLoading => "جاري التنفيذ...";
+
+  // Manager Products — Delete dialog
+  static String get managerProductsDeleteDialogTitle    => "حذف المنتج";
+  static String get managerProductsDeleteDialogSubtitle => "هل أنت متأكد من حذف هذا المنتج؟ لا يمكن التراجع عن هذا الإجراء.";
+  static String get managerProductsDeleteDialogConfirm  => "حذف";
+  static String get managerProductsDeleteDialogCancel   => "إلغاء";
+  static String get managerProductsDeleteSuccess        => "تم حذف المنتج بنجاح";
+  static String get managerProductsDeleteSuccessEn      => "Product deleted successfully";
+
+  // Manager Products — Activate dialog
+  static String get managerProductsActivateDialogTitle    => "تفعيل المنتج";
+  static String get managerProductsActivateDialogSubtitle => "هل تريد تفعيل هذا المنتج وجعله متاحاً للعملاء؟";
+  static String get managerProductsActivateDialogConfirm  => "تفعيل";
+  static String get managerProductsActivateDialogCancel   => "إلغاء";
+  static String get managerProductsActivateSuccess        => "تم تفعيل المنتج بنجاح";
+  static String get managerProductsActivateSuccessEn      => "Product activated successfully";
+
+  // Manager Products — Cancel/Pause dialog
+  static String get managerProductsCancelDialogTitle    => "إيقاف المنتج";
+  static String get managerProductsCancelDialogSubtitle => "هل تريد إيقاف هذا المنتج وإخفاؤه عن العملاء مؤقتاً؟";
+  static String get managerProductsCancelDialogConfirm  => "إيقاف";
+  static String get managerProductsCancelDialogCancel   => "إلغاء";
+  static String get managerProductsCancelSuccess        => "تم إيقاف المنتج بنجاح";
+  static String get managerProductsCancelSuccessEn      => "Product paused successfully";
+
+  // ── Add/Edit Product Form ──────────────────────────────────────────────────
+  static String get addProductTitle                     => 'إضافة منتج';
+  static String get addProductSubtitle                  => 'أضف تفاصيل المنتج لعرضه للعملاء';
+  static String get editProductTitle                    => 'تعديل المنتج';
+  static String get editProductSubtitle                 => 'قم بتعديل تفاصيل المنتج';
+  // Section titles
+  static String get addProductSecImages                 => 'صور المنتج';
+  static String get addProductSecBasicInfo              => 'المعلومات الأساسية';
+  static String get addProductSecName                   => 'اسم المنتج';
+  static String get addProductSecCategory               => 'التصنيف';
+  static String get addProductSecPrice                  => 'السعر';
+  static String get addProductSecColors                 => 'الألوان';
+  static String get addProductSecSizes                  => 'المقاسات';
+  static String get addProductSecStock                  => 'المخزون';
+  static String get addProductSecDescription            => 'الوصف والتفاصيل';
+  // Images
+  static String get addProductImagesTip                 => 'أضف صور المنتج (الحد الأقصى 5 صور)';
+  static String get addProductAddImage                  => 'إضافة صورة';
+  // Name
+  static String get addProductNameHint                  => 'أدخل اسم المنتج بشكل واضح';
+  // Category
+  static String get addProductCategoryHint              => 'اختر تصنيف المنتج';
+  static String get addProductNoCategoriesYet           => 'لا توجد تصنيفات';
+  // Price
+  static String get addProductPriceLabel                => 'السعر';
+  static String get addProductPriceHint                 => '0';
+  static String get addProductOriginalPrice             => 'السعر قبل الخصم';
+  static String get addProductOriginalPriceHint         => 'اتركه فارغاً إن لم يكن هناك خصم';
+  // Colors
+  static String get addProductColorsLabel               => 'اختر الألوان المتوفرة';
+  static String get addProductAddCustomColor            => 'لون مخصص +';
+  static String get addProductColorPickerTitle          => 'اختر لون مخصص';
+  static String get addProductColorNameHint             => 'اسم اللون بالعربية (مثال: بيجي فاتح)';
+  static String get addProductColorAdd                  => 'إضافة اللون';
+  static String get addProductColorWheelTab             => 'اختيار اللون';
+  static String get addProductColorCameraTab            => 'من الكاميرا';
+  static String get addProductTakePhoto                 => 'التقاط صورة';
+  static String get addProductPickFromGallery           => 'من المعرض';
+  static String get addProductTapToPickColor            => 'اضغط على أي نقطة في الصورة لاختيار اللون';
+  static String get addProductColorNameRequired         => 'يرجى إدخال اسم اللون';
+  static String get addProductColorNameRequiredEn       => 'Please enter the color name';
+  // Sizes
+  static String get addProductSizesLabel                => 'اختر المقاسات المتوفرة';
+  // Stock
+  static String get addProductStockLabel                => 'الكمية الإجمالية المتوفرة';
+  static String get addProductPieces                    => 'قطعة';
+  // Description & features
+  static String get addProductDescLabel                 => 'وصف المنتج';
+  static String get addProductDescHint                  => 'أدخل وصفاً تفصيلياً للمنتج...';
+  static String get addProductFeaturesLabel             => 'مميزات المنتج';
+  static String get addProductFeaturesHint              => 'أضف ميزة (مثال: قماش عالي الجودة)';
+  static String get addProductCareLabel                 => 'تعليمات العناية';
+  static String get addProductCareHint                  => 'أضف تعليمة (مثال: غسيل بارد فقط)';
+  static String get addProductDeliveryMin               => 'أقل وقت توصيل (بالأيام)';
+  static String get addProductDeliveryMax               => 'أقصى وقت توصيل (بالأيام)';
+  static String get addProductAddItem                   => 'إضافة';
+  // Submit
+  static String get addProductSubmitAdd                 => 'إضافة المنتج';
+  static String get addProductSubmitEdit                => 'حفظ التعديلات';
+  // Validation
+  static String get addProductValidationImages          => 'يرجى إضافة صورة للمنتج';
+  static String get addProductValidationImagesEn        => 'Please add at least one product image';
+  static String get addProductValidationName            => 'يرجى إدخال اسم المنتج';
+  static String get addProductValidationNameEn          => 'Please enter product name';
+  static String get addProductValidationCategory        => 'يرجى اختيار تصنيف المنتج';
+  static String get addProductValidationCategoryEn      => 'Please select a product category';
+  static String get addProductValidationPrice           => 'يرجى إدخال سعر صحيح للمنتج';
+  static String get addProductValidationPriceEn         => 'Please enter a valid product price';
+  static String get addProductValidationColors          => 'يرجى اختيار لون واحد على الأقل';
+  static String get addProductValidationColorsEn        => 'Please select at least one color';
+  static String get addProductValidationSizes           => 'يرجى اختيار مقاس واحد على الأقل';
+  static String get addProductValidationSizesEn         => 'Please select at least one size';
+  static String get addProductValidationNameAr          => 'يرجى إدخال اسم المنتج بالعربية';
+  static String get addProductValidationNameArEn        => 'Please enter product name in Arabic';
+  static String get addProductValidationVariantQty      => 'أدخل الكمية لكل لون ومقاس';
+  static String get addProductValidationVariantQtyEn    => 'Please enter quantity for color/size combinations';
+  // Name fields
+  static String get addProductNameAr                    => 'الاسم بالعربية';
+  static String get addProductNameArHint                => 'أدخل اسم المنتج بالعربية';
+  static String get addProductNameEn                    => 'الاسم بالإنجليزية';
+  static String get addProductNameEnHint                => 'اسم المنتج بالإنجليزية';
+  static String get addProductNameUr                    => 'الاسم بالأردية';
+  static String get addProductNameUrHint                => 'اسم المنتج بالأردية';
+  static String get addProductTranslate                 => 'ترجمة تلقائية';
+  static String get addProductTranslating               => 'جاري الترجمة...';
+  // Section titles
+  static String get addProductSecDelivery               => 'وقت التوصيل';
+  static String get addProductSecCareInstructions       => 'تعليمات العناية';
+  static String get addProductSecFeatures               => 'مميزات المنتج';
+  static String get addProductSecVariants               => 'الألوان والمقاسات والكميات';
+  static String get addProductSecExistingVariants       => 'المتغيرات الحالية';
+  // Variant
+  static String get addProductVariantColor              => 'اللون';
+  static String get addProductVariantSize               => 'المقاس';
+  static String get addProductVariantQty                => 'الكمية';
+  static String get addProductAddVariant                => 'إضافة متغير';
+  static String get addProductEditVariant               => 'تعديل';
+  static String get addProductDeleteVariant             => 'حذف';
+  static String get addProductVariantAdded              => 'تم إضافة المتغير بنجاح';
+  static String get addProductVariantAddedEn            => 'Variant added successfully';
+  static String get addProductVariantUpdated            => 'تم تعديل المتغير بنجاح';
+  static String get addProductVariantUpdatedEn          => 'Variant updated successfully';
+  static String get addProductVariantDeleted            => 'تم حذف المتغير بنجاح';
+  static String get addProductVariantDeletedEn          => 'Variant deleted successfully';
+  // Success
+  static String get addProductCreatedSuccess            => 'تم إضافة المنتج بنجاح';
+  static String get addProductCreatedSuccessEn          => 'Product added successfully';
+  static String get addProductUpdatedSuccess            => 'تم تعديل المنتج بنجاح';
+  static String get addProductUpdatedSuccessEn          => 'Product updated successfully';
+  // Delivery
+  static String get addProductDeliveryDay               => 'يوم';
+
+  // Common
+  static String get retry => "إعادة المحاولة";
+
+  // Notification Screen
+  static String get notificationScreenTitle                  => "الإشعارات";
+  static String get notificationScreenSubtitle               => "تابع آخر التحديثات";
+  static String get notificationNoNotifications              => "لا توجد إشعارات";
+  static String get notificationNoNotificationsDescription   => "ستظهر هنا جميع الإشعارات المتعلقة بحسابك";
+  static String get homeNavHome => "الرئيسية";
+  static String get homeNavOrders => "الطلبات";
+  static String get homeNavMessages => "الرسائل";
+  static String get homeNavProfile => "ملفي";
+
+  /// Suggested Requests Screen
+  static String get suggestedRequestsTitle => "طلبات على ذوقك";
+  static String get suggestedRequestsSubtitle => "تفصيل الذوق";
+  static String get suggestedRequestsOffers => "عروض";
+  static String get suggestedRequestsBudget => "الميزانية";
+  static String get suggestedRequestsDuration => "المدة";
+  static String get suggestedRequestsDays => "يوم";
+  static String get suggestedRequestsSubmitOffer => "قدم عرضك";
+  static String get suggestedRequestsCurrency => "د.إ";
+
+  /// Submit Offer Bottom Sheet
+  static String get submitOfferTitle => "إضافة عرض لطلب على ذوقك";
+  static String get submitOfferPriceLabel => "السعر المقترح (د.إ)";
+  static String get submitOfferPriceHint => "مثال: 950";
+  static String get submitOfferBudgetRange => "ميزانية العميلة:";
+  static String get submitOfferDurationLabel => "مدة التنفيذ بالأيام";
+  static String get submitOfferDurationHint => "مثال: 12";
+  static String get submitOfferDeliveryNote => "تاريخ التسليم المطلوب:";
+  static String get submitOfferDetailsLabel => "تفاصيل العرض";
+  static String get submitOfferDetailsHint => "أضف أي تفاصيل إضافية ستقوم بعملها...";
+  static String get submitOfferButton => "إرسال العرض";
+  static String get submitOfferSuccess => "تم إرسال عرضك بنجاح";
+  static String get submitOfferErrorPrice => "يرجى إدخال السعر المقترح";
+  static String get submitOfferErrorDuration => "يرجى إدخال مدة التنفيذ";
+
+  /// Order Tracking Screen
+  static String get orderTrackingTitle => "متابعة الطلبات";
+  static String get orderTrackingFilterAll => "الكل";
+  static String get orderTrackingFilterReady => "جاهز";
+  static String get orderTrackingFilterInProgress => "قيد التنفيذ";
+  static String get orderTrackingFilterReadyForDelivery => "جاهز للتوصيل";
+  static String get orderTrackingStatusInProgress => "قيد التنفيذ";
+  static String get orderTrackingStatusReady => "الطلب جاهز";
+  static String get orderTrackingStatusReadyForDelivery => "جاهز للتوصيل";
+  static String get orderTrackingPaid => "مدفوع";
+  static String get orderTrackingDetails => "تفاصيل";
+  static String get orderTrackingOrderDate => "تاريخ الطلب";
+  static String get orderTrackingDeadline => "الموعد النهائي";
+  static String get orderTrackingChat => "محادثة";
+  static String get orderTrackingUpdateReadyForDelivery => "تحديث: جاهز للتوصيل";
+  static String get orderTrackingStartExecution => "إبدأ التنفيذ";
+  static String get orderTrackingUpdateInDelivery => "تحديث: قيد التوصيل";
+  static String get orderTrackingDeadlineWarning => "تنبيه الموعد النهائي";
+  static String get orderTrackingDaysRemaining => "متبقي";
+  static String get orderTrackingDaysOnly => "أيام فقط";
+  static String get orderTrackingCurrency => "د.إ";
+
+  // ── Store Order Tracking ───────────────────────────────────────────────
+  static String get storeOrderTitle              => 'متابعة الطلبات';
+  static String get storeOrderFilterNew          => 'جديدة';
+  static String get storeOrderFilterInPrep       => 'قيد التحضير';
+  static String get storeOrderFilterReady        => 'جاهز للتوصيل';
+  static String get storeOrderStatusNew          => 'طلب جديد';
+  static String get storeOrderStatusInPrep       => 'قيد التحضير';
+  static String get storeOrderStatusReady        => 'جاهز للتوصيل';
+  static String get storeOrderActionStartPrep    => 'قيد التحضير';
+  static String get storeOrderActionMarkReady    => 'جاهز للتوصيل';
+  static String get storeOrderViewDetails        => 'عرض التفاصيل';
+  static String get storeOrderDetailTitle        => 'تفاصيل الطلب';
+  static String get storeOrderCustomerSection    => 'معلومات العميل';
+  static String get storeOrderProductsSection    => 'المنتجات';
+  static String get storeOrderTotalLabel         => 'المبلغ الإجمالي';
+  static String get storeOrderDeliveryAddress    => 'عنوان التوصيل';
+  static String get storeOrderUpdateStatusTo     => 'تحديث الحالة إلى:';
+  static String get storeOrderChat               => 'محادثة العميل';
+  static String get storeOrderDate               => 'تاريخ الطلب';
+  static String get storeOrderNoOrders           => 'لا توجد طلبات';
+  static String get storeOrderQuantity           => 'الكمية:';
+
+  /// My Offers Screen
+  static String get myOffersTitle => "عروضي المقدمة";
+  static String get myOffersFilterAll => "الكل";
+  static String get myOffersFilterUnderReview => "قيد المراجعة";
+  static String get myOffersFilterAccepted => "مقبولة";
+  static String get myOffersFilterRejected => "مرفوض";
+  static String get myOffersStatusAccepted => "تم القبول";
+  static String get myOffersStatusUnderReview => "قيد المراجعة";
+  static String get myOffersStatusRejected => "مرفوض";
+  static String get myOffersOrderRef => "رقم الطلب";
+  static String get myOffersOfferPrice => "عرض";
+  static String get myOffersExecutionDuration => "مدة التنفيذ";
+  static String get myOffersDetails => "المنافسون";
+  static String get myOffersBudget => "ميزانية العميلة";
+  static String get myOffersCompetingOffers => "عروض";
+  static String get myOffersDays => "يوم";
+  static String get myOffersCurrency => "د.إ";
+  static String get myOffersTrackOrders => "متابعة الطلبات";
+  static String get myOffersEditOffer => "تعديل العرض";
+  static String get myOffersWithdrawOffer => "سحب العرض";
+  static String get myOffersDelete => "حذف";
+  static String get myOffersNoOffers => "لا توجد عروض";
+  static String get myOffersConfirmWithdrawTitle => "سحب العرض";
+  static String get myOffersConfirmWithdrawBody => "هل أنت متأكد أنك تريد سحب هذا العرض؟";
+  static String get myOffersConfirmDeleteTitle => "حذف العرض";
+  static String get myOffersConfirmDeleteBody => "هل أنت متأكد أنك تريد حذف هذا العرض؟";
+  static String get myOffersConfirmYes => "نعم";
+  static String get myOffersConfirmNo => "إلغاء";
+  // Edit offer bottom sheet
+  static String get editOfferTitle => "تعديل العرض";
+  static String get editOfferSubmit => "حفظ التعديلات";
+  // Order detail screen
+  static String get orderDetailTitle => "تفاصيل الطلب";
+  static String get orderDetailProductName => "اسم المنتج";
+  static String get orderDetailDescription => "الوصف";
+  static String get orderDetailSpecialRequests => "متطلبات خاصة";
+  static String get orderDetailFabricType => "نوع القماش";
+  static String get orderDetailBudget => "الميزانية المتوقعة";
+  static String get orderDetailDeliveryDate => "تاريخ التسليم";
+  static String get orderDetailImages => "الصور المرجعية";
+  static String get orderDetailOffersCount => "عدد العروض";
+
+  /// Customer Reviews Screen
+  static String get reviewsScreenTitle => "التقييمات";
+  static String get reviewsScreenSubtitle => "قائمة التقييمات التي قام بها الزبائن";
+
+  // ──────────────────────────────────────────────────────
+  // Wallet Screen
+  // ──────────────────────────────────────────────────────
+  static String get walletScreenTitle => "المحفظة";
+  static String get walletScreenSubTitle => "إدارة رصيدك ومعاملاتك المالية";
+  static String get walletCurrentBalance => "الرصيد الحالي";
+  static String get walletPendingBalance => "الرصيد المعلق";
+  static String get walletWithdrawableBalance => "الرصيد القابل للسحب";
+  static String get walletWithdrawButton => "طلب سحب";
+  static String get walletTransactionsTitle => "المعاملات";
+  static String get walletNoTransactions => "لا توجد معاملات";
+  static String get walletNoTransactionsDescription => "ستظهر معاملاتك المالية هنا";
+  static String get walletTransactionCompleted => "مكتمل";
+  static String get walletTransactionPending => "قيد الانتظار";
+  static String get walletTransactionCancelled => "ملغي";
+  static String get walletTransactionApproved => "معتمد";
+  static String get walletBankAccountButton => "الحساب البنكي";
+  static String get walletWithdrawSuccess => "تم تقديم طلب السحب بنجاح";
+  static String get walletWithdrawSuccessEn => "Withdrawal request submitted successfully";
+  static String get walletBankAccountAddSuccess => "تم إضافة الحساب البنكي بنجاح";
+  static String get walletBankAccountAddSuccessEn => "Bank account added successfully";
+  static String get walletBankAccountUpdateSuccess => "تم تحديث الحساب البنكي بنجاح";
+  static String get walletBankAccountUpdateSuccessEn => "Bank account updated successfully";
+
+  // ──────────────────────────────────────────────────────
+  // Withdraw Request Screen
+  // ──────────────────────────────────────────────────────
+  static String get withdrawRequestTitle => "طلب سحب";
+  static String get withdrawRequestSubtitle => "يمكنك طلب سحب رصيدك المتاح";
+  static String get withdrawRequestCardTitle => "طلب سحب رصيد";
+  static String get withdrawRequestCardSubtitle => "أدخل المبلغ الذي ترغب بسحبه وسيتم تحويله لحسابك البنكي";
+  static String get withdrawRequestAmountLabel => "المبلغ المراد سحبه";
+  static String get withdrawRequestMaxLimit => "الحد الأقصى:";
+  static String get withdrawRequestNotesLabel => "ملاحظات";
+  static String get withdrawRequestNotesHint => "أدخل ملاحظاتك هنا (اختياري)";
+  static String get withdrawRequestBankAccountLabel => "الحساب البنكي";
+  static String get withdrawRequestChangeAccount => "تغيير";
+  static String get withdrawRequestConfirmButton => "تأكيد طلب السحب";
+  static String get withdrawRequestProcessingTime => "يتم معالجة الطلبات خلال 3-5 أيام عمل";
+  static String get withdrawRequestConfirmDialogTitle => "تأكيد طلب السحب";
+  static String get withdrawRequestConfirmDialogSubtitle => "هل أنت متأكد من تقديم طلب السحب؟";
+  static String get withdrawRequestConfirmDialogConfirm => "تأكيد";
+  static String get withdrawRequestConfirmDialogCancel => "إلغاء";
+  static String get withdrawRequestNoBankAccount => "يرجى إضافة بيانات الحساب البنكي أولاً";
+  static String get withdrawRequestInvalidAmount => "يرجى إدخال مبلغ صحيح";
+  static String get withdrawRequestAmountExceedsLimit => "المبلغ أكبر من الرصيد القابل للسحب";
+  static String get currencySymbol => "ر.س";
+
+  // ──────────────────────────────────────────────────────
+  // Add Bank Account Screen
+  // ──────────────────────────────────────────────────────
+  static String get addBankAccountFormTitle => "إضافة حساب بنكي";
+  static String get addBankAccountFormSubTitle => "أدخل بيانات حسابك البنكي لتتمكن من سحب رصيدك";
+  static String get addBankAccountFormSub1 => "اسم المصرف";
+  static String get addBankAccountFormHint1 => "مثال: بنك الراجحي";
+  static String get addBankAccountFormSub2 => "اسم صاحب الحساب";
+  static String get addBankAccountFormHint2 => "الاسم الكامل لصاحب الحساب";
+  static String get addBankAccountFormSub3 => "رقم الحساب";
+  static String get addBankAccountFormHint3 => "أدخل رقم الحساب البنكي";
+  static String get addBankAccountFormSub4 => "رقم الـ IBAN";
+  static String get addBankAccountFormHint4 => "SA0000000000000000000000";
+  static String get addBankAccountFormButton => "إضافة الحساب البنكي";
+  static String get addBankAccountConfirmTitle => "تأكيد إضافة الحساب البنكي";
+  static String get addBankAccountConfirmSubtitle => "هل أنت متأكد من إضافة هذا الحساب البنكي؟";
+  static String get addBankAccountConfirmButton => "تأكيد";
+  static String get addBankAccountCancelButton => "إلغاء";
+
+  // ──────────────────────────────────────────────────────
+  // Chat / Conversations Screen
+  // ──────────────────────────────────────────────────────
+  static String get chatConversationsTitle => "المحادثات";
+  static String get chatConversationsCount => "محادثة";
+  static String get chatSearchHint => "ابحث في المحادثات";
+  static String get chatActiveNow => "نشط الان";
+  static String get chatOfflineNow => "غير متصل";
+  static String get chatWriteMessage => "اكتب رسالة ...";
+  static String get chatCustomOffer => "عرض مخصص";
+  static String get chatNoConversations => "لا توجد محادثات";
+  static String get chatNoConversationsDesc => "ستظهر محادثاتك هنا عند بدء التواصل";
+
+  // ──────────────────────────────────────────────────────
+  // Chat Detail Screen
+  // ──────────────────────────────────────────────────────
+  static String get chatDetailTitle => "تفاصيل المحادثة";
+
+  // ──────────────────────────────────────────────────────
+  // Custom Offer in Chat
+  // ──────────────────────────────────────────────────────
+  static String get chatOfferPrice => "سعر العرض:";
+  static String get chatOfferDuration => "الوقت للإنجاز:";
+  static String get chatOfferDays => "ساعات";
+  static String get chatOfferCurrency => "د";
+  static String get chatOfferAdditions => "إضافات";
+  static String get chatOfferEdit => "تعديل العرض";
+  static String get chatOfferCancel => "إلغاء العرض";
+
+  // ──────────────────────────────────────────────────────
+  // User Chat — Offer Actions
+  // ──────────────────────────────────────────────────────
+  static String get chatUserOfferAccept => "قبول العرض";
+  static String get chatUserOfferDecline => "رفض العرض";
+  static String get chatUserOfferAccepted => "تم قبول العرض";
+  static String get chatUserOfferDeclined => "تم رفض العرض";
+  static String get chatUserAcceptDialogTitle => "تأكيد قبول العرض";
+  static String get chatUserAcceptDialogSubtitle => "هل أنت متأكد من قبول هذا العرض؟ سيتم تأكيد الطلب وبدء التنفيذ";
+  static String get chatUserAcceptDialogConfirm => "تأكيد القبول";
+  static String get chatUserAcceptDialogCancel => "إلغاء";
+  static String get chatUserDeclineDialogTitle => "تأكيد رفض العرض";
+  static String get chatUserDeclineDialogSubtitle => "هل أنت متأكد من رفض هذا العرض؟";
+  static String get chatUserDeclineDialogConfirm => "تأكيد الرفض";
+  static String get chatUserDeclineDialogCancel => "إلغاء";
+
+  // ──────────────────────────────────────────────────────
+  // Add Custom Offer Screen
+  // ──────────────────────────────────────────────────────
+  static String get addCustomOfferAppBarTitle => "إضافة عرض";
+  static String get addCustomOfferAppBarSubtitle => "إضافة عرض مخصص للمشتري";
+  static String get addCustomOfferCardTitle => "إضافة عرض مخصص";
+  static String get addCustomOfferCardSubtitle => "أنشئ عرضاً مخصصاً بناءً على الاتفاق الذي تم في المحادثة";
+  static String get addCustomOfferTitleLabel => "عنوان العرض";
+  static String get addCustomOfferTitleHint => "قم بكتابة عنوان العرض الخاص بالمشتري";
+  static String get addCustomOfferDescLabel => "وصف العرض";
+  static String get addCustomOfferDescHint => "قم بكتابة جميع التفاصيل التي تم الاتفاق عليها بالمحادثة";
+  static String get addCustomOfferAmountLabel => "المبلغ المطلوب";
+  static String get addCustomOfferAmountHint => "0";
+  static String get addCustomOfferAdditionsLabel => "الإضافات";
+  static String get addCustomOfferAdditionsNote => "يمكن إضافة ملاحظات أو إضافات على العرض المخصص";
+  static String get addCustomOfferSendButton => "إرسال العرض في المحادثة";
+  static String get addCustomOfferConfirmTitle => "تأكيد إرسال العرض";
+  static String get addCustomOfferConfirmSubtitle => "هل أنت متأكد من إرسال هذا العرض المخصص؟";
+  static String get addCustomOfferConfirmButton => "تأكيد";
+  static String get addCustomOfferCancelButton => "إلغاء";
+
+  // ──────────────────────────────────────────────────────
+  // My Orders — User Screen
+  // ──────────────────────────────────────────────────────
+  static String get myOrdersTitle              => "طلباتي";
+  static String get myOrdersFilterAll          => "الكل";
+  static String get myOrdersFilterWaiting      => "انتظار عروض";
+  static String get myOrdersFilterInProgress   => "قيد التنفيذ";
+  static String get myOrdersFilterReady        => "جاهز للتوصيل";
+  static String get myOrdersFilterCompleted    => "مكتمل";
+
+  // Order type badges
+  static String get myOrdersTypeCustom         => "خدمة على ذوقك";
+  static String get myOrdersTypeDirect         => "طلب مباشر";
+  static String get myOrdersTypeReady          => "قطع جاهزة";
+
+  // Status labels
+  static String get myOrdersStatusWaiting      => "انتظار العروض";
+  static String get myOrdersStatusHasOffers    => "مراجعة العروض";
+  static String get myOrdersStatusInProgress   => "قيد التنفيذ";
+  static String get myOrdersStatusReady        => "جاهز للتوصيل";
+  static String get myOrdersStatusCompleted    => "مكتمل";
+
+  // Card meta
+  static String get myOrdersCurrency           => "د.إ";
+  static String get myOrdersPiecesLabel        => "قطعة";
+  static String get myOrdersDateLabel          => "تاريخ الطلب";
+  static String get myOrdersDeadlineLabel      => "الموعد النهائي";
+  static String get myOrdersDetailsBtn         => "تفاصيل الطلب";
+  static String get myOrdersChatBtn            => "محادثة";
+  static String get myOrdersEmpty              => "لا توجد طلبات";
+  static String get myOrdersOffersCount        => "عروض";
+
+  // ── Submitted Offers Screen ────────────────────────────────────────────────
+  static String get submittedOffersTitle          => "العروض المقدمة";
+  static String get submittedOffersSubtitle       => "قائمة العروض المقدمة من قبل الخياطين";
+  static String get submittedOffersBannerCount    => "عروض متاحة";
+  static String get submittedOffersBannerHint     => "قارن واختر الأنسب لك";
+  static String get submittedOffersAvailable      => "متاح";
+  static String get submittedOffersBusy           => "مشغول";
+  static String get submittedOffersDuration       => "مدة التنفيذ";
+  static String get submittedOffersDays           => "أيام";
+  static String get submittedOffersPrice          => "السعر";
+  static String get submittedOffersCurrency       => "درهم";
+  static String get submittedOffersSamples        => "عينات الأقمشة المقترحة";
+  static String get submittedOffersRepliedAgo     => "رد منذ";
+  static String get submittedOffersViewProfile    => "عرض الملف";
+  static String get submittedOffersAccept         => "قبول العرض";
+  static String get submittedOffersUnavailable    => "غير متاح حاليا";
+  static String get submittedOffersEmpty          => "لا توجد عروض متاحة بعد";
+  static String get submittedOffersOrders         => "طلب";
+  static String get submittedOffersBusyWarning    => "هذا الخياط مشغول حالياً، قد يستغرق الرد وقتاً أطول من المعتاد";
+  static String get submittedOffersConfirm        => "تأكيد القبول";
+
+  // ── Order Details Screen ───────────────────────────────────────────────────
+  static String get orderDetailsTitle             => "تفاصيل الطلب";
+  static String get orderDetailsOrderNumberPrefix => "الطلب رقم";
+  static String get orderDetailsOrderIdLabel      => "طلب رقم";
+  static String get orderDetailsDirectBadge       => "طلب مباشر من الخياط";
+  static String get orderDetailsCustomBadge       => "طلب مخصص";
+  static String get orderDetailsReadyBadge        => "قطع جاهزة";
+  static String get orderDetailsCurrentStatus     => "حالة الطلب الحالية:";
+  static String get orderDetailsTrackingNo        => "رقم التتبع:";
+  static String get orderDetailsOrderDate         => "تاريخ الطلب";
+  static String get orderDetailsDeliveryDate      => "التسليم:";
+  static String get orderDetailsTabDetails        => "التفاصيل";
+  static String get orderDetailsTabTracking       => "التتبع";
+  // — Product section
+  static String get orderDetailsProductSection    => "تفاصيل المنتج";
+  static String get orderDetailsFabricLabel       => "القماش:";
+  static String get orderDetailsMeasurementsLabel => "المقاس:";
+  static String get orderDetailsTotalPriceLabel   => "المبلغ الإجمالي";
+  static String get orderDetailsCurrency          => "د.إ";
+  static String get orderDetailsPaid              => "تم الدفع";
+  static String get orderDetailsDescriptionLabel  => "تفاصيل الطلب";
+  // — Tailor section
+  static String get orderDetailsTailorSection     => "معلومات الخياط";
+  static String get orderDetailsChat              => "محادثة";
+  static String get orderDetailsCall              => "اتصال";
+  // — Tracking section
+  static String get orderDetailsTrackingSection   => "مراحل الطلب";
+  static String get orderDetailsStepCompleted     => "مكتمل";
+  static String get orderDetailsStepCurrent       => "جارٍ";
+  static String get orderDetailsStepPending       => "قادم";
+  static String get orderDetailsStepsOf           => "من";
+  // — Status labels
+  static String get orderDetailsStatusWaiting     => "انتظار عروض";
+  static String get orderDetailsStatusHasOffers   => "عروض واردة";
+  static String get orderDetailsStatusInProgress  => "قيد التنفيذ";
+  static String get orderDetailsStatusReady       => "جاهز للشحن";
+  static String get orderDetailsStatusShipped     => "تم الشحن";
+  static String get orderDetailsStatusDelivering  => "قيد التوصيل";
+  static String get orderDetailsStatusCompleted   => "مكتمل";
+
+  // ──────────────────────────────────────────────────────
+  // User Home Screen
+  // ──────────────────────────────────────────────────────
+  static String get userHomeWelcomeBack => "أهلا وسهلاً بعودتك";
+  static String get userHomeDefaultUser => "مستخدم";
+  static String get userHomeSearchHint => "ابحث على خياط فاضي";
+  static String get userHomeLoyaltyLabel => "نقاط ولاء";
+  static String get userHomeLoyaltyPointUnit => "نقطة";
+  static String get userHomeBannerTitle => "خياط تحت خدمتك!";
+  static String get userHomeBannerCount => "24";
+  static String get userHomeBannerSubtitle => "خياطة تحت خدمتك";
+  static String get userHomeCategoryAll => "عرض الكل";
+  static String get userHomeCategoryFirst => "عرض اول";
+  static String get userHomeCategoryFabric => "متجر الأقمشة";
+  static String get userHomeCategoryKandora => "متجر الكندورة";
+  static String get userHomeCategoryAtelier => "خياط اتيليه";
+  static String get userHomeStoresTitle => "متاجر المتاجر";
+  static String get userHomeShopsListTitle => "قائمة المتاجر";
+  static String get userHomeRecommendTitle => "على ذوقك";
+  static String get userHomeRecommendSubtitle => "من خلال العناصر التي أعجبتك هنا ننصحك بالتي شابه لذوقك الراقي";
+  static String get userHomeLatestTitle => "أحدث التفاصيل";
+  static String get userHomeBestTailorsTitle => "أفضل الخياطين";
+  static String get userHomeViewAll => "عرض الكل";
+  static String get userHomeViewDetails => "عرض التفاصيل";
+  static String get userHomeCurrency => "د.إ";
+  static String get userHomeNavHome     => tr('navHome');
+  static String get userHomeNavOrders   => tr('navOrders');
+  static String get userHomeNavStore    => tr('navShops');
+  static String get userHomeNavMessages => tr('navMessages');
+
+  static String get homeCustomOfferTitle => "على ذوقك";
+  static String get homeCustomOfferSubtitle =>
+      "فصّلي ملبسك المخصصة بكل دقة كما تتمنّين، واستلمي عروض أسعار من نخبة الخياطين المحترفين لاختيار الأنسب لك بكل سهولة.";
+
+  // -- Home Map Card --
+  static String get homeMapAvailableTailorsTitle => "الخياطون المتاحون الآن";
+  static String get homeMapTailorCountSuffix => "خياط تحت خدمتك";
+
+  // -- Products Grid --
+  static String get userHomeLatestProductsTitle => "أحدث القصات";
+  static String get productBestSellerLabel => "الأكثر مبيعاً";
+
+  // -- Store Page --
+  static String get storeTitle => "المتجر";
+  static String get storeSearchHint => "ابحث عن منتج أو متجر...";
+  static String get storeCategoryAll => "الكل";
+  static String get storeCategoryAbaya => "عبايات";
+  static String get storeCategoryKandora => "كندورة";
+  static String get storeCategoryFabric => "أقمشة";
+  static String get storeCategoryAccessories => "إكسسوارات";
+  static String get storeResultsCount => "منتج";
+  static String get storeSortLabel => "ترتيب حسب";
+  static String get storeSortPopular => "الأكثر شعبية";
+  static String get storeSortNewest => "الأحدث";
+  static String get storeSortPriceLow => "السعر: الأقل";
+  static String get storeSortPriceHigh => "السعر: الأعلى";
+  static String get storeEmptyTitle => "لا توجد منتجات";
+  static String get storeEmptySubtitle => "جرّب البحث بكلمات أخرى أو تصفّح الأقسام";
+
+  // -- Best Selling Stores Section --
+  static String get bestSellingStoresTitle => "المتاجر الأكثر مبيعاً";
+  static String get bestSellingStoreProducts => "منتجات المتجر";
+  static String get bestSellingStoreProductCount => "منتج";
+  static String get bestSellingStoreBrowseAll => "تصفح جميع المنتجات";
+
+  // ── Details Shop Screen ────────────────────────────────────────────────────
+  static String get detailsShopTitle => "تفاصيل المتجر";
+  static String get detailsShopOpen => "المتجر مفتوح";
+  static String get detailsShopClosed => "المتجر مغلق";
+  static String get detailsShopProductsStat => "منتج";
+  static String get detailsShopOrdersStat => "طلب مكتمل";
+  static String get detailsShopRatingStat => "تقييم";
+  static String get detailsShopSpecializations => "التخصصات";
+  static String get detailsShopMemberSince => "عضو منذ";
+  static String get detailsShopContact => "تواصل معنا";
+  static String get detailsShopProductsTitle => "منتجات المتجر";
+  static String get detailsShopAbout => "عن المتجر";
+  static String get detailsShopAllProducts => "الكل";
+  static String get detailsShopNoProducts => "لا توجد منتجات في هذه الفئة";
+  static String get detailsShopContactSubtitle => "ابدأ محادثة مباشرة مع المتجر";
+  static String get detailsShopIdLabel => "معرف المتجر";
+  static String get detailsShopIdCopied => "تم نسخ معرف المتجر";
+
+  // ── Cart / Shopping Basket Screen ──────────────────────────────────────────
+  static String get cartTitle => "سلة التسوق";
+  static String get cartItemCount => "منتجات";
+  static String get cartStoreProducts => "منتجات";
+  static String get cartStoreSubtotal => "المجموع الفرعي للمتجر";
+  static String get cartQuantity => "الكمية";
+  static String get cartColor => "اللون";
+  static String get cartSize => "المقاس";
+  static String get cartDiscountCode => "كود الخصم";
+  static String get cartDiscountHint => "ادخل كود الخصم";
+  static String get cartDiscountApply => "تطبيق";
+  static String get cartOrderSummary => "ملخص الطلب";
+  static String get cartSubtotal => "المجموع الفرعي";
+  static String get cartShippingFees => "رسوم الشحن";
+  static String get cartStoresShipping => "متاجر";
+  static String get cartSeparateOrderNote => "سيتم إنشاء طلب منفصل لكل متجر";
+  static String get cartOrdersCount => "طلبات";
+  static String get cartTotal => "المجموع الكلي";
+  static String get cartContinueShopping => "متابعة التسوق";
+  static String get cartCheckout => "إتمام الطلب";
+  static String get cartCurrency => "د.إ";
+  static String get cartEmpty => "السلة فارغة";
+  static String get cartEmptyDesc => "لم تقم بإضافة أي منتجات بعد، تصفح المتاجر وأضف منتجاتك المفضلة";
+  static String get cartShowDetails => "عرض التفاصيل";
+  static String get cartHideDetails => "إخفاء التفاصيل";
+  static String get cartProductCount => "منتج";
+  static String get cartTotalAmount => "الإجمالي";
+
+  // -- Best Tailors Section --
+  static String get tailorAvailableNow    => "متاح الآن للطلبات";
+  static String get tailorUnavailableNow  => "غير متاح";
+  static String get tailorCompletedOrders => "طلب مكتمل";
+  static String get tailorOffersCount     => "عرض";
+
+  // ── Tailor Address Screen ──────────────────────────────────────────────────
+  static String get tailorAddressTitle          => tr('tailorAddressTitle');
+  static String get tailorAddressSubtitle       => tr('tailorAddressSubtitle');
+  static String get tailorAddressCardTitle      => tr('tailorAddressCardTitle');
+  static String get tailorAddressEditButton     => tr('tailorAddressEditButton');
+  static String get tailorAddressAddButton      => tr('tailorAddressAddButton');
+  static String get tailorAddressEmptyTitle     => tr('tailorAddressEmptyTitle');
+  static String get tailorAddressEmptySubtitle  => tr('tailorAddressEmptySubtitle');
+  // ── Add Address Dialog ─────────────────────────────────────────────────────
+  static String get tailorAddressDialogTitle    => tr('tailorAddressDialogTitle');
+  static String get tailorAddressDialogSubtitle => tr('tailorAddressDialogSubtitle');
+  static String get tailorAddressDialogSavedTitle  => tr('tailorAddressDialogSavedTitle');
+  static String get tailorAddressDialogSavedSub    => tr('tailorAddressDialogSavedSub');
+  static String get tailorAddressNameLabel      => tr('tailorAddressNameLabel');
+  static String get tailorAddressNameHint       => tr('tailorAddressNameHint');
+  static String get tailorAddressLocationLabel  => tr('tailorAddressLocationLabel');
+  static String get tailorAddressLocationHint   => tr('tailorAddressLocationHint');
+  static String get tailorAddressOpenMapButton  => tr('tailorAddressOpenMapButton');
+  static String get tailorAddressDetailLabel    => tr('tailorAddressDetailLabel');
+  static String get tailorAddressDetailHint     => tr('tailorAddressDetailHint');
+  static String get tailorAddressSubmitButton   => tr('tailorAddressSubmitButton');
+
+  // ── Update Profile Screen ──────────────────────────────────────────────────
+  static String get updateProfileTitle        => tr('updateProfileTitle');
+  static String get updateProfileSubtitle     => tr('updateProfileSubtitle');
+  static String get updateProfileAvatarHint   => tr('updateProfileAvatarHint');
+  static String get updateProfileSectionLabel => tr('updateProfileSectionLabel');
+  static String get updateProfileNameLabel    => tr('updateProfileNameLabel');
+  static String get updateProfileNameHint     => tr('updateProfileNameHint');
+  static String get updateProfilePhoneLabel   => tr('updateProfilePhoneLabel');
+  static String get updateProfilePhoneHint    => tr('updateProfilePhoneHint');
+  static String get updateProfileBioLabel     => tr('updateProfileBioLabel');
+  static String get updateProfileBioHint      => tr('updateProfileBioHint');
+  static String get updateProfileSaveButton   => tr('updateProfileSaveButton');
+  static String get updateProfileSuccess      => tr('updateProfileSuccess');
+  static String get updateProfileNameEmpty    => tr('updateProfileNameEmpty');
+  static String get updateProfileNameArLabel  => tr('updateProfileNameArLabel');
+  static String get updateProfileNameArHint   => tr('updateProfileNameArHint');
+  static String get updateProfileNameEnLabel  => tr('updateProfileNameEnLabel');
+  static String get updateProfileNameEnHint   => tr('updateProfileNameEnHint');
+  static String get updateProfileShopBioLabel => tr('updateProfileShopBioLabel');
+  static String get updateProfileShopBioHint  => tr('updateProfileShopBioHint');
+  static String get updateProfileCoverHint         => tr('updateProfileCoverHint');
+  static String get updateProfileLogoHint          => tr('updateProfileLogoHint');
+  static String get updateProfileShopSectionLabel  => tr('updateProfileShopSectionLabel');
+  static String get updateProfileConfirmTitle      => tr('updateProfileConfirmTitle');
+  static String get updateProfileConfirmSubtitle   => tr('updateProfileConfirmSubtitle');
+  static String get updateProfileConfirmYes        => tr('updateProfileConfirmYes');
+  static String get updateProfileConfirmNo         => tr('updateProfileConfirmNo');
+
+  // ── Change Password Screen ─────────────────────────────────────────────────
+  static String get changePasswordTitle         => tr('changePasswordTitle');
+  static String get changePasswordSubtitle      => tr('changePasswordSubtitle');
+  static String get changePasswordBannerTitle   => tr('changePasswordBannerTitle');
+  static String get changePasswordBannerSubtitle=> tr('changePasswordBannerSubtitle');
+  static String get changePasswordSectionLabel  => tr('changePasswordSectionLabel');
+  static String get changePasswordCurrentLabel  => tr('changePasswordCurrentLabel');
+  static String get changePasswordNewLabel      => tr('changePasswordNewLabel');
+  static String get changePasswordConfirmLabel  => tr('changePasswordConfirmLabel');
+  static String get changePasswordButton                  => tr('changePasswordButton');
+  static String get changePasswordConfirmDialogTitle      => tr('changePasswordConfirmDialogTitle');
+  static String get changePasswordConfirmDialogSubtitle   => tr('changePasswordConfirmDialogSubtitle');
+  static String get changePasswordConfirmDialogConfirm    => tr('changePasswordConfirmDialogConfirm');
+  static String get changePasswordConfirmDialogCancel     => tr('changePasswordConfirmDialogCancel');
+
+  // ── About App Screen ───────────────────────────────────────────────────────
+  static String get aboutAppTitle               => tr('aboutAppTitle');
+  static String get aboutAppSubtitle            => tr('aboutAppSubtitle');
+  static String get aboutAppStatOrders          => tr('aboutAppStatOrders');
+  static String get aboutAppStatTailors         => tr('aboutAppStatTailors');
+  static String get aboutAppStatUsers           => tr('aboutAppStatUsers');
+  static String get aboutAppSectionAbout        => tr('aboutAppSectionAbout');
+  static String get aboutAppDescription         => tr('aboutAppDescription');
+  static String get aboutAppSectionFeatures     => tr('aboutAppSectionFeatures');
+  static String get aboutAppFeature1Title       => tr('aboutAppFeature1Title');
+  static String get aboutAppFeature1Sub         => tr('aboutAppFeature1Sub');
+  static String get aboutAppFeature2Title       => tr('aboutAppFeature2Title');
+  static String get aboutAppFeature2Sub         => tr('aboutAppFeature2Sub');
+  static String get aboutAppFeature3Title       => tr('aboutAppFeature3Title');
+  static String get aboutAppFeature3Sub         => tr('aboutAppFeature3Sub');
+  static String get aboutAppFeature4Title       => tr('aboutAppFeature4Title');
+  static String get aboutAppFeature4Sub         => tr('aboutAppFeature4Sub');
+  static String get aboutAppBrandingName        => tr('aboutAppBrandingName');
+  static String get aboutAppBrandingTagline     => tr('aboutAppBrandingTagline');
+  static String get aboutAppVersion             => tr('aboutAppVersion');
+
+  // ── Specializations Bottom Sheet ────────────────────────────────────────────
+  static String get specialTitle              => tr('specialTitle');
+  static String get specialSubtitle          => tr('specialSubtitle');
+  static String get specialInfoBanner        => tr('specialInfoBanner');
+  static String get specialAddLabel          => tr('specialAddLabel');
+  static String get specialAddHint           => tr('specialAddHint');
+  static String get specialCurrentLabel      => tr('specialCurrentLabel');
+  static String get specialNoun              => tr('specialNoun');
+  static String get specialSuggestionsLabel  => tr('specialSuggestionsLabel');
+  static String get specialSaveButton        => tr('specialSaveButton');
+
+  // ── Portfolio Bottom Sheet ────────────────────────────────────────────────────
+  static String get portfolioTitle           => tr('portfolioTitle');
+  static String get portfolioSubtitle        => tr('portfolioSubtitle');
+  static String get portfolioHint            => tr('portfolioHint');
+  static String get portfolioAddLabel        => tr('portfolioAddLabel');
+  static String get portfolioDoneButton      => tr('portfolioDoneButton');
+  static String get portfolioAddImageSuccess   => tr('portfolioAddImageSuccess');
+  static String get portfolioDeleteImageSuccess => tr('portfolioDeleteImageSuccess');
+  static String get addSpecializationSuccess   => tr('addSpecializationSuccess');
+  static String get deleteSpecializationSuccess => tr('deleteSpecializationSuccess');
+
+  // ── FAQ Screen ─────────────────────────────────────────────────────────────────
+  static String get faqTitle           => tr('faqTitle');
+  static String get faqSubtitle        => tr('faqSubtitle');
+  static String get faqQ1              => tr('faqQ1');
+  static String get faqQ1Sub          => tr('faqQ1Sub');
+  static String get faqQ1Answer       => tr('faqQ1Answer');
+  static String get faqQ2              => tr('faqQ2');
+  static String get faqQ2Sub          => tr('faqQ2Sub');
+  static String get faqQ2Answer       => tr('faqQ2Answer');
+  static String get faqQ3              => tr('faqQ3');
+  static String get faqQ3Sub          => tr('faqQ3Sub');
+  static String get faqQ3Answer       => tr('faqQ3Answer');
+  static String get faqQ4              => tr('faqQ4');
+  static String get faqQ4Sub          => tr('faqQ4Sub');
+  static String get faqQ4Answer       => tr('faqQ4Answer');
+  static String get faqQ5              => tr('faqQ5');
+  static String get faqQ5Sub          => tr('faqQ5Sub');
+  static String get faqQ5Answer       => tr('faqQ5Answer');
+  static String get faqQ6              => tr('faqQ6');
+  static String get faqQ6Sub          => tr('faqQ6Sub');
+  static String get faqQ6Answer       => tr('faqQ6Answer');
+
+  // ── Contact Us Screen ────────────────────────────────────────────────────────
+  static String get contactUsTitle          => tr('contactUsTitle');
+  static String get contactUsSubtitle       => tr('contactUsSubtitle');
+  static String get contactUsEmail          => tr('contactUsEmail');
+  static String get contactUsEmailLabel     => tr('contactUsEmailLabel');
+  static String get contactUsPhone          => tr('contactUsPhone');
+  static String get contactUsPhoneLabel     => tr('contactUsPhoneLabel');
+  static String get contactUsSendSection    => tr('contactUsSendSection');
+  static String get contactUsNameLabel      => tr('contactUsNameLabel');
+  static String get contactUsNameHint       => tr('contactUsNameHint');
+  static String get contactUsEmailFieldLabel => tr('contactUsEmailFieldLabel');
+  static String get contactUsEmailFieldHint  => tr('contactUsEmailFieldHint');
+  static String get contactUsSubjectLabel   => tr('contactUsSubjectLabel');
+  static String get contactUsSubjectHint    => tr('contactUsSubjectHint');
+  static String get contactUsMessageLabel   => tr('contactUsMessageLabel');
+  static String get contactUsMessageHint    => tr('contactUsMessageHint');
+  static String get contactUsSendButton     => tr('contactUsSendButton');
+  static String get contactUsSendSuccess    => tr('contactUsSendSuccess');
+  static String get contactUsSendSuccessEn  => tr('contactUsSendSuccessEn');
+  static String get contactUsFillAllFields  => tr('contactUsFillAllFields');
+  static String get contactUsFillAllFieldsEn => tr('contactUsFillAllFieldsEn');
+
+  // ── Privacy Policy Screen ──────────────────────────────────────────────────
+  static String get privacyTitle        => tr('privacyTitle');
+  static String get privacySubtitle     => tr('privacySubtitle');
+  static String get privacyIntroTitle   => tr('privacyIntroTitle');
+  static String get privacyIntroBody    => tr('privacyIntroBody');
+  static String get privacy1Title       => tr('privacy1Title');
+  static String get privacy1Body        => tr('privacy1Body');
+  static String get privacy2Title       => tr('privacy2Title');
+  static String get privacy2Body        => tr('privacy2Body');
+  static String get privacy3Title       => tr('privacy3Title');
+  static String get privacy3Body        => tr('privacy3Body');
+  static String get privacy4Title       => tr('privacy4Title');
+  static String get privacy4Body        => tr('privacy4Body');
+  static String get privacyLastUpdated  => tr('privacyLastUpdated');
+
+  // ── Create Order Screen (على ذوقك) ────────────────────────────────────────
+  static String get createOrderTitle            => "على ذوقك";
+  static String get createOrderSubtitlePage1    => "حدد طلبك وسنجد لك أفضل الخياطين";
+  static String get createOrderSubtitlePage2    => "حدد ميزانيتك وموعد التسليم";
+  static String get createOrderPage1Heading     => "ماذا تريد؟";
+  static String get createOrderPage1SubHeading  => "صف لنا الملبس الذي تريده بالتفصيل";
+  static String get createOrderPage2Heading     => "الميزانية والتوقيت";
+  static String get createOrderPage2SubHeading  => "حدد الميزانية وموعد التسليم المناسب";
+  static String get createOrderNameLabel        => "اسم الملبس";
+  static String get createOrderNameHint         => "مثال: كندورة حديثة";
+  static String get createOrderDescLabel        => "وصف الملبس والتفاصيل";
+  static String get createOrderDescHint         => "اكتب وصفاً تفصيلياً للملبس والتفاصيل التي تريدها...";
+  static String get createOrderSpecialLabel     => "طلبات خاصة (اختياري)";
+  static String get createOrderSpecialHint      => "مثال : لون الخيط ذهبي";
+  static String get createOrderFabricLabel      => "نوع القماش";
+  static String get createOrderFabricChiffon    => "شيفون";
+  static String get createOrderFabricCrepe      => "كريب";
+  static String get createOrderFabricCotton     => "قطن";
+  static String get createOrderFabricSilk       => "حرير";
+  static String get createOrderFabricVelvet     => "مخمل";
+  static String get createOrderFabricOther      => "أخرى";
+  static String get createOrderBudgetLabel      => "الميزانية المتوقعة (اختياري)";
+  static String get createOrderBudgetHint       => "أدخل الميزانية المتوقعة";
+  static String get createOrderBudgetNote       => "سيتم عرض المبلغ على الخياط";
+  static String get createOrderCurrency         => "د.إ";
+  static String get createOrderDeadlineLabel    => "تاريخ التسليم و الوقت التسليم";
+  static String get createOrderDeadlineHint     => "dd/mm/yyyy";
+  static String get createOrderImagesLabel      => "صور مشابهة";
+  static String get createOrderImagesSubtitle   => "قم برفع صور مشابهة لإرسالها للخياط";
+  static String get createOrderImagesUpload     => "أرفق صور";
+  static String get createOrderImagesFormats    => "PNG, JPG or GIF (max. 400x400px)";
+  static String get createOrderNextButton       => "التالي";
+  static String get createOrderSubmitButton     => "تأكيد النشر";
+  static String get createOrderValidateName     => "يرجى إدخال اسم الملبس";
+  static String get createOrderValidateDesc     => "يرجى وصف الملبس والتفاصيل";
+  static String get createOrderValidateFabric   => "يرجى اختيار نوع القماش";
+  static String get createOrderValidateBudget   => "يرجى إدخال الميزانية المتوقعة";
+  static String get createOrderValidateDeadline => "يرجى تحديد موعد التسليم";
+
+  // Create Order — Confirm & Feedback
+  static String get createOrderConfirmTitle        => "تأكيد نشر الطلب";
+  static String get createOrderConfirmSubtitle     => "هل أنت متأكد من نشر هذا الطلب؟ سيكون مرئياً للخياطين فور النشر.";
+  static String get createOrderConfirmYes          => "نشر الطلب";
+  static String get createOrderConfirmNo           => "مراجعة";
+  static String get createOrderSuccess             => "تم نشر طلبك بنجاح! 🎉";
+  static String get createOrderSuccessEn           => "Order published successfully!";
+  static String get createOrderErrorServer         => "حدث خطأ أثناء نشر الطلب، يرجى المحاولة مجدداً.";
+  static String get createOrderErrorServerEn       => "An error occurred, please try again.";
+  static String get createOrderValidateMinBudget   => "يرجى إدخال الحد الأدنى للميزانية";
+  static String get createOrderValidateMaxBudget   => "يرجى إدخال الحد الأقصى للميزانية";
+  static String get createOrderMinBudgetLabel      => "الحد الأدنى للميزانية (ر.س)";
+  static String get createOrderMinBudgetHint       => "مثال: 100";
+  static String get createOrderMaxBudgetLabel      => "الحد الأقصى للميزانية (ر.س)";
+  static String get createOrderMaxBudgetHint       => "مثال: 500";
+
+  // ──────────────────────────────────────────────────────
+  // Chat — Socket / Connection States
+  // ──────────────────────────────────────────────────────
+  static String get chatConnecting => "جاري الاتصال...";
+  static String get chatConnectingEn => "Connecting...";
+  static String get chatConnectionError => "فشل الاتصال بالمحادثة";
+  static String get chatConnectionErrorEn => "Chat connection failed";
+  static String get chatMessageSendFailed => "فشل إرسال الرسالة";
+  static String get chatMessageSendFailedEn => "Failed to send message";
+  static String get chatLoadingConversations => "جاري تحميل المحادثات...";
+  static String get chatLoadingMessages => "جاري تحميل الرسائل...";
+  static String get chatNoMessages => "لا توجد رسائل بعد";
+  static String get chatNoMessagesDesc => "ابدأ المحادثة بإرسال رسالة";
+
+  // ── Loyalty Points Screen ─────────────────────────────────────────────────
+  static String get loyaltyScreenTitle          => "نقاط ولاء";
+  static String get loyaltyScreenSubtitle       => "اكسب نقاطاً واستبدلها بخصومات رائعة";
+  static String get loyaltyBalanceLabel         => "رصيد نقاط ولاء";
+  static String get loyaltyTodayDate            => "تاريخ اليوم";
+  static String get loyaltyPointUnit            => "نقطة";
+  static String get loyaltyAvailableRewards     => "المكافأة المتاحة";
+  static String get loyaltyAvailableRewardsSub  => "شاهد المكافأة المتاحة لكسب خصم";
+  static String get loyaltyRedeemButton         => "استبدل الآن";
+  static String get loyaltyRedeemSuccess        => "تم استبدال النقاط بنجاح";
+  static String get loyaltyRedeemSuccessEn      => "Points redeemed successfully";
+  static String get loyaltyNotEnoughPoints      => "نقاطك غير كافية لاستبدال هذه المكافأة";
+  static String get loyaltyNotEnoughPointsEn    => "Not enough points for this reward";
+  static String get loyaltyPointsRequired       => "نقطة مطلوبة";
+  static String get loyaltyDiscountFixed        => "خصم";
+  static String get loyaltyDiscountPercent      => "خصم %";
+  static String get loyaltyEmptyRewards          => "لا توجد مكافآت متاحة حالياً";
+  static String get loyaltyEmptyRewardsSub       => "تابعنا قريباً لمكافآت جديدة";
+  static String get loyaltyLoadingError          => "تعذر تحميل بيانات نقاط الولاء";
+  static String get loyaltyLoadingErrorEn        => "Failed to load loyalty data";
+  static String get loyaltyRedeemDialogSubtitle  => "استخدم الرمز أدناه عند الدفع لتفعيل الخصم";
+  static String get loyaltyCodeCopied            => "تم نسخ الرمز";
+  static String get loyaltyCodeTapToCopy         => "اضغط على الرمز لنسخه";
+
+  // ── Loyalty – Unused Codes ─────────────────────────────────────────────────
+  static String get loyaltyUnusedCodesTitle      => "أكوادي غير المستخدمة";
+  static String get loyaltyUnusedCodesSubtitle   => "الأكواد التي استبدلتها ولم تستخدمها بعد";
+  static String get loyaltyUnusedCodesEmpty      => "لا توجد أكواد غير مستخدمة";
+  static String get loyaltyUnusedCodesEmptySub   => "أكوادك ستظهر هنا بعد الاستبدال";
+  static String get loyaltyUnusedCodeCopied      => "تم نسخ الكود";
+  static String get loyaltyUnusedCodeCopiedEn    => "Code copied";
+  static String get loyaltyUnusedCodesCurrency   => "د.إ";
+
+  // ── Common ────────────────────────────────────────────────────────────────
+  static String get close => "حسناً";
+
+  // ── Cart — API Feedback ────────────────────────────────────────────────────
+  static String get cartAddedToCart         => "تمت الإضافة إلى السلة";
+  static String get cartRemovedFromCart     => "تمت الإزالة من السلة";
+  static String get cartUpdatedQty          => "تم تحديث الكمية";
+  static String get cartCouponApplied       => "تم تطبيق كود الخصم";
+  static String get cartCouponRemoved       => "تم إزالة كود الخصم";
+  static String get cartCouponInvalid       => "كود الخصم غير صالح";
+  static String get cartCheckoutSuccess     => "تم الطلب بنجاح!";
+  static String get cartRemoveCoupon        => "إزالة الخصم";
+  static String get cartDiscount            => "الخصم";
+  static String get cartCouponLabel         => "كود الخصم:";
+  static String get cartSavings             => "توفيرك:";
+  static String get cartTotalAfterDiscount  => "الإجمالي بعد الخصم";
+
+  // ── Product Details Screen ─────────────────────────────────────────────────
+  static String get productDetailsTitle         => "تفاصيل المنتج";
+  static String get productDetailsColor         => "اللون";
+  static String get productDetailsSize          => "المقاس";
+  static String get productDetailsQty           => "الكمية";
+  static String get productDetailsAddToCart     => "أضف إلى السلة";
+  static String get productDetailsFeatures      => "المميزات";
+  static String get productDetailsCare          => "تعليمات العناية";
+  static String get productDetailsDelivery      => "وقت التوصيل";
+  static String get productDetailsDeliveryDays  => "أيام";
+  static String get productDetailsRating        => "التقييم";
+  static String get productDetailsReviews       => "تقييم";
+  static String get productDetailsShop          => "المتجر";
+  static String get productDetailsCategory      => "التصنيف";
+  static String get productDetailsOutOfStock    => "نفذت الكمية";
+  static String get productDetailsSelectVariant => "اختر اللون والمقاس";
+  static String get productDetailsCurrency      => "د.إ";
+  static String get productDetailsLoading       => "جاري تحميل تفاصيل المنتج...";
+  static String get productDetailsError         => "فشل تحميل تفاصيل المنتج";
+
+  // ── Tailor Details Screen ──────────────────────────────────────────────────
+  static String get tailorDetailsTitle          => "تفاصيل الخياط";
+  static String get tailorDetailsAvailable      => "متاح الآن";
+  static String get tailorDetailsUnavailable    => "غير متاح حالياً";
+  static String get tailorDetailsBio            => "نبذة عن الخياط";
+  static String get tailorDetailsSpecializations => "التخصصات";
+  static String get tailorDetailsPortfolio      => "معرض الأعمال";
+  static String get tailorDetailsStats          => "الإحصائيات";
+  static String get tailorDetailsRating         => "التقييم";
+  static String get tailorDetailsReviews        => "تقييم";
+  static String get tailorDetailsOffers         => "عرض";
+  static String get tailorDetailsCompletedOrders => "طلب مكتمل";
+  static String get tailorDetailsRequestOrder   => "طلب تفصيل خاص";
+  static String get tailorDetailsContactChat    => "مراسلة الخياط";
+  static String get tailorDetailsNoPortfolio    => "لا توجد أعمال مضافة بعد";
+  static String get tailorDetailsNoBio          => "لم يُضف الخياط نبذة عنه بعد";
+  static String get tailorDetailsNoSpecializations => "لا توجد تخصصات مضافة";
+  static String get tailorDetailsLoading        => "جاري تحميل تفاصيل الخياط...";
+  static String get tailorDetailsError          => "فشل تحميل تفاصيل الخياط";
+
+  // ── Shop Owner Home Screen ─────────────────────────────────────────────────
+  static String get shopHomeShopOpen            => "المحل مفتوح";
+  static String get shopHomeShopClosed          => "المحل مغلق";
+  static String get shopHomeBalanceTitle        => "الرصيد المتاح للسحب";
+  static String get shopHomeBalanceCurrency     => "درهم إماراتي";
+  static String get shopHomeLastLogin           => "آخر تسجيل دخول:";
+  static String get shopHomeAverageRating       => "متوسط التقييم";
+  static String get shopHomeReviewsCount        => "تقييم";
+  static String get shopHomeGreeting            => "مرحباً،";
+  static String get shopHomeReviewsTitle        => "آراء العملاء";
+  static String get shopHomeReviewsSubtitle     => "عرض آراء العملاء";
+  static String get shopHomeProductsTitle       => "إدارة المنتجات";
+  static String get shopHomeProductsSubtitle    => "عرض – إضافة – تعديل – حذف";
+}
