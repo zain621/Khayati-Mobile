@@ -1,4 +1,3 @@
-
 workflows:
   ios-testflight:
     name: Khayati Mobile TestFlight Build
@@ -8,6 +7,8 @@ workflows:
       app_store_connect: KhayatiAppStoreKey
 
     environment:
+      groups:
+        - env_vars
       flutter: 3.35.5
       xcode: "26.5"
       cocoapods: default
@@ -17,6 +18,10 @@ workflows:
         bundle_identifier: com.os.khayati.app
 
     scripts:
+      - name: Create .env file
+        script: |
+          printf '%s\n' "$ENV_FILE" > .env
+
       - name: Get Flutter packages
         script: flutter pub get
 
@@ -27,7 +32,8 @@ workflows:
         script: xcode-project use-profiles
 
       - name: Build iOS IPA
-        script: flutter build ipa --release
+        script: |
+          flutter build ipa --release
 
     artifacts:
       - build/ios/ipa/*.ipa
