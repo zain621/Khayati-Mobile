@@ -1,4 +1,4 @@
-# Uncomment this line to define a global platform for your project
+# Global platform for the project
 platform :ios, '15.0'
 
 # CocoaPods analytics sends network stats synchronously affecting flutter build latency.
@@ -41,16 +41,21 @@ post_install do |installer|
   installer.pods_project.targets.each do |target|
     flutter_additional_ios_build_settings(target)
     target.build_configurations.each do |config|
-      # Enforce minimum iOS 14.0 across all pods (required by google_maps_flutter 2.9+)
+      # Enforce minimum iOS 15.0 across all pods (Apple requires 15.0+ from April 2027)
       config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
+
       # permission_handler: enable only the permissions the app actually uses
-      if target.name == 'permission_handler_apple'
-        config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= [
-          '$(inherited)',
-          ## dart: PermissionGroup.location
-          'PERMISSION_LOCATION=1',
-        ]
-      end
+      config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= [
+        '$(inherited)',
+        ## dart: PermissionGroup.location
+        'PERMISSION_LOCATION=1',
+        ## dart: PermissionGroup.camera
+        # 'PERMISSION_CAMERA=1',
+        ## dart: PermissionGroup.photos
+        # 'PERMISSION_PHOTOS=1',
+        ## dart: PermissionGroup.notification
+        # 'PERMISSION_NOTIFICATIONS=1',
+      ]
     end
   end
 end
