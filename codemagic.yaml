@@ -9,7 +9,7 @@ workflows:
 
     environment:
       flutter: 3.35.5
-      xcode: latest
+      xcode: "26.5"
       cocoapods: default
 
       ios_signing:
