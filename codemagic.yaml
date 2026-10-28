@@ -28,25 +28,16 @@ workflows:
       - name: Generate model files
         script: dart run build_runner build --delete-conflicting-outputs
 
-      - name: Install CocoaPods dependencies
-        script: |
-          cd ios
-          pod install
-          cd ..
-
       - name: Configure code signing
         script: xcode-project use-profiles
 
-      - name: Debug signing (can remove later)
-        script: |
-          echo "=== export_options.plist ==="
-          cat /Users/builder/export_options.plist || echo "export_options.plist MISSING"
-          echo "=== identities ==="
-          security find-identity -v -p codesigning || true
-
       - name: Build iOS IPA
         script: |
+          LATEST=$(app-store-connect get-latest-testflight-build-number "6827130588" || echo 0)
+          BUILD_NUMBER=$((LATEST + 1))
+          echo "Using build number $BUILD_NUMBER"
           flutter build ipa --release \
+            --build-number=$BUILD_NUMBER \
             --export-options-plist=/Users/builder/export_options.plist
 
     artifacts:
