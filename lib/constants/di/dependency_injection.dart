@@ -29,6 +29,16 @@ initModule() async {
   await EasyLocalization.ensureInitialized();
 
   await dotenv.load(fileName: '.env');
+  // Codemagic/Windows secrets can leave \r on keys; normalize so apiUrl resolves.
+  final cleanedEnv = <String, String>{};
+  for (final entry in dotenv.env.entries) {
+    final key = entry.key.trim().replaceAll('\r', '');
+    if (key.isEmpty || key.startsWith('#')) continue;
+    cleanedEnv[key] = entry.value.trim().replaceAll('\r', '');
+  }
+  dotenv.env
+    ..clear()
+    ..addAll(cleanedEnv);
 
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,

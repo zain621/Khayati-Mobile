@@ -53,14 +53,32 @@ class ErrorHandler implements Exception {
           statusCode,
           ManagerStrings.noInternetConnection,
         );
-      } else {
+      } else if (error.type == DioExceptionType.badCertificate) {
         failure = Failure(
           statusCode,
-          ManagerStrings.unKnown,
+          ManagerStrings.noInternetConnection,
+        );
+      } else {
+        // Prefer Dio's own message over a blank "Unknown" (empty baseUrl,
+        // JSON parse errors, HTML error pages, etc.).
+        final detail = error.message?.trim();
+        failure = Failure(
+          statusCode,
+          (detail != null && detail.isNotEmpty)
+              ? detail
+              : ManagerStrings.unKnown,
         );
       }
     } else {
-      failure = TypeHandlerEnum.unknown.getFailure();
+      final detail = error?.toString().trim();
+      if (detail != null &&
+          detail.isNotEmpty &&
+          detail != 'null' &&
+          !detail.startsWith('Instance of')) {
+        failure = Failure(ResponseCode.unKnown, detail);
+      } else {
+        failure = TypeHandlerEnum.unknown.getFailure();
+      }
     }
   }
 

@@ -20,7 +20,19 @@ workflows:
     scripts:
       - name: Create .env file
         script: |
-          printf '%s\n' "$ENV_FILE" > .env
+          if [ -z "${ENV_FILE:-}" ]; then
+            echo "ERROR: ENV_FILE secure variable is empty. Add it to the env_vars group."
+            exit 1
+          fi
+          # Strip CR so Windows-edited secrets don't break keys (apiUrl\r).
+          printf '%s\n' "$ENV_FILE" | tr -d '\r' > .env
+          if ! grep -q '^apiUrl=' .env; then
+            echo "ERROR: .env is missing apiUrl= (check ENV_FILE content)."
+            exit 1
+          fi
+          # Print keys only — never values — so CI logs stay safe.
+          echo "Loaded .env keys:"
+          cut -d= -f1 .env | sed '/^$/d;/^\s*#/d'
 
       - name: Get Flutter packages
         script: flutter pub get

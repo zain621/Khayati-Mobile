@@ -25,10 +25,19 @@ class DioFactory {
       Constants.contentType: Constants.applicationJson,
     };
 
+    final apiUrl = EnvService.getString(
+      key: EnvConstants.apiUrl,
+    );
+    assert(
+      apiUrl.isNotEmpty,
+      'apiUrl is empty — check .env / Codemagic ENV_FILE',
+    );
+    if (kDebugMode && apiUrl.isEmpty) {
+      debugPrint('ERROR: apiUrl is empty. Login and API calls will fail.');
+    }
+
     dio.options = BaseOptions(
-      baseUrl: EnvService.getString(
-        key: EnvConstants.apiUrl,
-      ),
+      baseUrl: apiUrl,
       headers: headers,
       connectTimeout: const Duration(seconds: 15),
       receiveTimeout: const Duration(

@@ -108,7 +108,7 @@ class _ProfileUserScreenState extends State<ProfileUserScreen> {
                                 ProfileDataWidgetContainer(
                                   title: '${p?.loyaltyPoints ?? 0}',
                                   subtitle: ManagerStrings.profileLoyaltyPoints,
-                                  iconPath: ManagerIcons.raylIcon,
+                                  iconPath: ManagerIcons.dirhamIcon,
                                 ),
                               ],
                             ),

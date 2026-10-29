@@ -649,7 +649,7 @@ class _RewardCard extends StatelessWidget {
                         ),
                       ),
                       SizedBox(width: ManagerWidth.w4),
-                      CustomSvgImage(path: ManagerIcons.raylIcon),
+                      CustomSvgImage(path: ManagerIcons.dirhamIcon),
                     ],
                   ),
                   SizedBox(height: ManagerHeight.h4),
