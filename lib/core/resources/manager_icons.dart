@@ -35,8 +35,8 @@ class ManagerIcons {
     static const String completedOrderIcon = "$iconsPath/completed_order_icon.svg";
     static const String inPrgressOderIcon = "$iconsPath/in_prgress_order_icon.svg";
     static const String raylIcon = "$iconsPath/ryal_icon.svg";
-    /// UAE Dirham (AED) — use for loyalty / Dubai currency UI
-    static const String dirhamIcon = "$iconsPath/dirham_icon.svg";
+    /// UAE Dirham (AED) — PNG mark for loyalty / Dubai currency UI
+    static const String dirhamIcon = "$iconsPath/dirham_uae.png";
 
 
 
